@@ -28,7 +28,7 @@
 
 # 📖 My Portfolio <a id="about-project"></a>
 
-    My Portfolio is a website that showcases my personal and professional profile, including my skills, education, experience and projects. It also features some of my interests and hobbies, as well as ways to contact me.
+  - My Portfolio is a website that showcases my personal and professional profile, including my skills, education, experience and projects. It also features some of my interests and hobbies, as well as ways to contact me.
 
 ## 🛠 Built With <a id="built-with"></a>
 
