@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+
 /* ==================== General styles ================= */
 
 * {
@@ -10,13 +12,29 @@
   color: #1a2236;
 }
 
+body {
+  background-image: url(Assets/Shapes/1.svg);
+  background-repeat: no-repeat;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .primary-text {
-  font-family: 'Playfair Display', sans-serif;
-  font-size: 51px;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  line-height: 100%;
 }
 
 .secondary-text {
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .primary-button {
@@ -25,16 +43,32 @@
   background: #1a2236;
   color: white;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 27px;
   text-align: center;
   border: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-color: white;
+  border: 1px #1a2236 solid;
+  color: #1a2236;
+  transition: 0.5s;
+}
+
+.primary-button:active {
+  border: 2px #1a2236 solid;
 }
 
 /* ==================== header styles ==================== */
 
 .toolbar {
-  display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 .menu {
@@ -46,15 +80,14 @@
 /* ==================== headline styles ==================== */
 
 .headline {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: calc(100vh - 78px);
+  height: 100vh;
 }
 
 .info {
-  padding: 30px 22px;
-  display: flex;
-  flex-direction: column;
+  margin: 104px 14px 32px 16px;
   gap: 22px;
+}
+
+.headline-text {
+  letter-spacing: -0.01em;
 }
