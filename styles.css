@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
+
+/* ==================== General styles ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  color: #1a2236;
+}
+
+body {
+  background-image: url(Assets/Shapes/1.svg);
+  background-repeat: no-repeat;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  line-height: 100%;
+}
+
+.secondary-text {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.primary-button {
+  width: 100%;
+  height: 50px;
+  background: #1a2236;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  border: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-color: white;
+  border: 1px #1a2236 solid;
+  color: #1a2236;
+  transition: 0.5s;
+}
+
+.primary-button:active {
+  border: 2px #1a2236 solid;
+}
+
+/* ==================== header styles ==================== */
+
+.toolbar {
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.menu {
+  margin: 19px 14px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+/* ==================== headline styles ==================== */
+
+.headline {
+  height: 100vh;
+}
+
+.info {
+  margin: 104px 14px 32px 16px;
+  gap: 22px;
+}
+
+.headline-text {
+  letter-spacing: -0.01em;
+}
