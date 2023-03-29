@@ -72,7 +72,6 @@ body {
 }
 
 .menu {
-  height: fit-content;
   margin: 19px 14px;
   font-size: 32px;
   cursor: pointer;
