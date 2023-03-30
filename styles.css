@@ -148,19 +148,24 @@ body {
 .works {
   width: 100%;
   max-width: 500px;
+  align-items: center;
 }
 
 .works h1 {
-  margin: 40px 32px 32px 16px;
+  padding: 40px 32px 32px 16px;
+  width: 100%;
 }
 
 .projects {
   display: grid;
+  width: 100%;
+  justify-content: center;
+  text-align: left;
+  grid-template-columns: 100%;
 }
 
 .project {
   height: 342px;
-  width: 100%;
   list-style: none;
 }
 
@@ -230,7 +235,7 @@ body {
 /* ==================== about styles ==================== */
 
 .about {
-  margin: 56px 14px 0 16px;
+  padding: 56px 14px 0 16px;
   width: 100%;
   max-width: 500px;
 }
