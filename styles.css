@@ -15,6 +15,8 @@
 body {
   background-image: url(Assets/Shapes/1.svg);
   background-repeat: no-repeat;
+  background-color: white;
+  align-items: center;
 }
 
 .flex-row {
@@ -47,18 +49,66 @@ body {
   line-height: 27px;
   text-align: center;
   border: none;
-  transition: 0.5s;
+  transition: 0.1s;
   cursor: pointer;
+}
+
+.dark-button i {
+  color: white;
+  margin-left: 20px;
+}
+
+.primary-button i {
+  color: white;
+  margin-left: 20px;
 }
 
 .primary-button:hover {
   background-color: white;
   border: 1px #1a2236 solid;
   color: #1a2236;
-  transition: 0.5s;
+  transition: 0.1s;
+}
+
+.primary-button:hover i {
+  color: #1a2236;
+  transition: 0.1s;
 }
 
 .primary-button:active {
+  border: 2px #1a2236 solid;
+}
+
+.dark-button {
+  width: 190px;
+  height: 44px;
+  color: white;
+  background: #1a2236;
+  font-weight: 500;
+  border: 1px solid white;
+  padding: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.dark-button:hover {
+  background-color: white;
+  border: 1px #1a2236 solid;
+  color: #1a2236;
+  transition: 0.1s;
+}
+
+.dark-button:hover i {
+  color: #1a2236;
+  transition: 0.1s;
+}
+
+.dark-button:active {
   border: 2px #1a2236 solid;
 }
 
@@ -80,7 +130,8 @@ body {
 /* ==================== headline styles ==================== */
 
 .headline {
-  height: 100vh;
+  width: 100%;
+  max-width: 500px;
 }
 
 .info {
@@ -90,4 +141,148 @@ body {
 
 .headline-text {
   letter-spacing: -0.01em;
+}
+
+/* ==================== Works styles ==================== */
+
+.works {
+  width: 100%;
+  max-width: 500px;
+}
+
+.works h1 {
+  margin: 40px 32px 32px 16px;
+}
+
+.projects {
+  display: grid;
+}
+
+.project {
+  height: 342px;
+  width: 100%;
+  list-style: none;
+}
+
+.project-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 186px;
+}
+
+.project-image1 {
+  background-image: url(assets/Projects/1/main.svg);
+}
+
+.project-image2 {
+  background-image: url(assets/Projects/2/main.jpeg);
+}
+
+.project-image3 {
+  background-image: url(assets/Projects/3/main.jpg);
+}
+
+.project-image4 {
+  background-image: url(assets/Projects/4/main.svg);
+}
+
+.project-image5 {
+  background-image:
+    url(
+      assets/Projects/5/main.svg
+    );
+}
+
+.project-image6 {
+  background-image: url(assets/Projects/6/main.svg);
+}
+
+.project-info {
+  height: 156px;
+  padding: 20px;
+  color: white;
+  background-color: #1a2236;
+}
+
+.project-name {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 80%;
+}
+
+.project-tags {
+  margin: 16px 0 20px 0;
+  list-style: none;
+  gap: 10px;
+}
+
+.project-tags li {
+  font-weight: 300;
+  font-size: 10.3334px;
+  line-height: 80%;
+  color: #1a2236;
+  background-color: #98dede;
+  padding: 6px 10px;
+}
+
+/* ==================== about styles ==================== */
+
+.about {
+  margin: 56px 14px 0 16px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.about-info {
+  gap: 20px;
+}
+
+.cards {
+  margin-top: 27px;
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cards > li {
+  height: 289px;
+  width: 289px;
+  padding: 50px 0 50px 50px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.cards h2 {
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.cards li li {
+  list-style: disc;
+  list-style-position: inside;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.0525em;
+  color: white;
+}
+
+.languages {
+  background-color: #1c52a8;
+  background-image: url(assets/Shapes/3.1.svg);
+}
+
+.frameworks {
+  background: #e2505c;
+  background-image: url(assets/Shapes/3.2.svg);
+}
+
+.skills {
+  background: #febf52;
+  background-image: url(assets/Shapes/3.3.svg);
 }
