@@ -10,7 +10,7 @@
   <script src="https://kit.fontawesome.com/c6f38472f5.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="flex-column">
   <header class="toolbar flex-row">
     <nav class="menu">
       <i class="fa-sharp fa-solid fa-bars"></i>
@@ -32,9 +32,9 @@
 
   <section class="works flex-column">
     <h1 class="primary-text">Projects</h1>
-    <div class="projects flex-column">
+    <ul class="projects">
 
-      <div class="project">
+      <li class="project">
         <div class="project-image project-image1">
         </div>
         <div class="project-info flex-column">
@@ -44,13 +44,12 @@
             <li>Ruby on Rails</li>
             <li>JavaScript</li>
           </ul>
-          <button class="primary-button dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
+          <button type="button" class="primary-button dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
         </div>
-      </div>
+      </li>
 
-      <div class="project">
-        <div class="project-image project-image2">
-        </div>
+      <li class="project">
+        <div class="project-image project-image2"> </div>
         <div class="project-info flex-column">
           <h2 class="project-name">Project name goes here</h2>
           <ul class="project-tags flex-row">
@@ -58,13 +57,12 @@
             <li>Ruby on Rails</li>
             <li>JavaScript</li>
           </ul>
-          <button class="primary-button dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
+          <button type="button" class="primary-button dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
         </div>
-      </div>
+      </li>
 
-      <div class="project">
-        <div class="project-image project-image3">
-        </div>
+      <li class="project">
+        <div class="project-image project-image3"> </div>
         <div class="project-info flex-column">
           <h2 class="project-name">Project name goes here</h2>
           <ul class="project-tags flex-row">
@@ -72,13 +70,12 @@
             <li>Ruby on Rails</li>
             <li>JavaScript</li>
           </ul>
-          <button class="primary-button dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
+          <button type="button" class="primary-button dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
         </div>
-      </div>
+      </li>
 
-      <div class="project">
-        <div class="project-image project-image4">
-        </div>
+      <li class="project">
+        <div class="project-image project-image4"> </div>
         <div class="project-info flex-column">
           <h2 class="project-name">Project name goes here</h2>
           <ul class="project-tags flex-row">
@@ -86,13 +83,12 @@
             <li>Ruby on Rails</li>
             <li>JavaScript</li>
           </ul>
-          <button class="primary-button dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
+          <button type="button" class="primary-button dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
         </div>
-      </div>
+      </li>
 
-      <div class="project">
-        <div class="project-image project-image5">
-        </div>
+      <li class="project">
+        <div class="project-image project-image5"> </div>
         <div class="project-info flex-column">
           <h2 class="project-name">Project name goes here</h2>
           <ul class="project-tags flex-row">
@@ -100,13 +96,12 @@
             <li>Ruby on Rails</li>
             <li>JavaScript</li>
           </ul>
-          <button class="primary-button dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
+          <button type="button" class="dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
         </div>
-      </div>
+      </li>
 
-      <div class="project">
-        <div class="project-image project-image6">
-        </div>
+      <li class="project">
+        <div class="project-image project-image6"> </div>
         <div class="project-info flex-column">
           <h2 class="project-name">Project name goes here</h2>
           <ul class="project-tags flex-row">
@@ -114,11 +109,51 @@
             <li>Ruby on Rails</li>
             <li>JavaScript</li>
           </ul>
-          <button class="primary-button dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
+          <button type="button" class="dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
         </div>
-      </div>
+      </li>
+    </ul>
+  </section>
 
+  <section class="about flex-column">
+    <div class="about-info flex-column">
+      <h1 class="primary-text">About</h1>
+      <p class="secondary-text headline-text">I can help you build a product , feature or website Look through some of
+        my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact
+        me.
+      </p>
+      <button type="button" class="primary-button">Get my CV <i class="fa-regular fa-circle-down"></i></button>
     </div>
+    <ul class="cards">
+      <li class="languages">
+        <h2>Languages</h2><br>
+        <ul>
+          <li>JavaScript (ES5/ES6)</li>
+          <li>Ruby</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </li>
+      <li class="frameworks">
+        <h2>Frameworks</h2><br>
+        <ul>
+          <li>React.js</li>
+          <li>Ruby on rails</li>
+          <li>RSpec</li>
+          <li>Capibara</li>
+        </ul>
+      </li>
+      <li class="skills">
+        <h2>Skills</h2><br>
+        <ul>
+          <li>Database Management</li>
+          <li>CLI</li>
+          <li>API Design</li>
+          <li>Version Control</li>
+          <li>Web Development</li>
+        </ul>
+      </li>
+    </ul>
   </section>
 
 </body>
