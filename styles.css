@@ -248,13 +248,14 @@ body {
   margin-top: 27px;
   list-style: none;
   display: grid;
+  grid-template-columns: 100%;
   justify-content: center;
   gap: 16px;
 }
 
 .cards > li {
   height: 289px;
-  width: 289px;
+  width: 100%;
   padding: 50px 0 50px 50px;
   background-repeat: no-repeat;
   background-position: bottom right;
