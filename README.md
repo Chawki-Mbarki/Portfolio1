@@ -23,7 +23,7 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 # 📖 My Portfolio <a id="about-project"></a>
@@ -193,9 +193,9 @@ Feel free to check the [issues page](https://github.com/chawkimbarki/Portfolio/i
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
+<!-- FAQ  -->
 
-## ❓ FAQ (OPTIONAL) <a id="faq"></a>
+## ❓ FAQ <a id="faq"></a>
 
 - **How can i get a copy of this on my local machine**
 
