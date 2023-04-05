@@ -162,7 +162,32 @@
       </ul>
     </section>
 
+    <section class="contact flex-column">
+      <div class="contact-info flex-column">
+        <h1 class="primary-text">Get started</h1>
+        <p class="secondary-text headline-text">I'm always interested in hearing about new projects, so if you'd like to
+          chat please get in touch.</p>
+      </div>
+
+      <form class="contact-form flex-column" action="https://formspree.io/f/mzbqjqzq" method="POST">
+        <ul class="flex-column">
+          <li>
+            <label for="name">Your name</label><br>
+            <input type="text" id="name" name="user_name" placeholder="Enter your name here..." maxlength="30" required>
+          </li>
+          <li>
+            <label for="email">Your email</label><br>
+            <input type="email" id="email" name="user_email" placeholder="Enter your email here..." required>
+          </li>
+          <li>
+            <label for="message">Your message</label><br>
+            <textarea name="message" id="message" name="user_message" placeholder="Enter your message here..."
+              maxlength="500" required></textarea>
+          </li>
         </ul>
+        <button type="submit" class="primary-button">Start Collaboration</button>
+      </form>
+    </section>
   </main>
 
 </body>
