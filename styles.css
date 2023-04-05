@@ -33,6 +33,32 @@ main {
   flex-direction: column;
 }
 
+.resume-link {
+  color: #92dcdc;
+  max-width: 500px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  gap: 15px;
+  align-items: center;
+}
+
+.resume-link i {
+  color: #92dcdc;
+  width: 22px;
+}
+
+.social-links {
+  max-width: 500px;
+  gap: 30px;
+}
+
+.social-links i {
+  color: white;
+  font-size: 25px;
+}
+
 .primary-text {
   font-family: 'Playfair Display', serif;
   font-size: 50px;
@@ -359,3 +385,13 @@ main {
   color: #7d7c84;
 }
 
+/* ==================== Footer styles ==================== */
+
+footer {
+  width: 100%;
+  color: white;
+  background: #1a2236;
+  align-items: center;
+  padding: 28px 14px 36px 18px;
+  gap: 25px;
+}
