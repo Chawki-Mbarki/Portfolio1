@@ -19,6 +19,11 @@ body {
   align-items: center;
 }
 
+main {
+  width: 100%;
+  align-items: center;
+}
+
 .flex-row {
   display: flex;
 }
