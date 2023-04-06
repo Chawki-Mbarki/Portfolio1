@@ -1,0 +1,333 @@
+/* ==================== Removed elements ================= */
+
+.menu,
+.geometry-shape1,
+.headline-image,
+.project-info {
+  display: none !important;
+}
+
+/* ==================== General styles ================= */
+
+body {
+  background: none;
+}
+
+.primary-text {
+  font-size: 110px;
+  line-height: 100%;
+}
+
+.primary-button {
+  max-width: 254px;
+  height: 70px;
+}
+
+.max-width {
+  max-width: 1440px;
+}
+
+/* ==================== header styles ==================== */
+
+header {
+  height: 100px;
+  padding: 38px 0;
+  justify-content: center;
+  box-shadow: 0 0.5px 0 #dddfe6;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+.nav-links a {
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a2236;
+  background:
+    linear-gradient(to right, transparent, transparent),
+    linear-gradient(to right, black, black, black);
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-size: 0 0.1em, 100% 0.1em;
+}
+
+/* ==================== headline styles ==================== */
+
+.headline {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 5%;
+}
+
+.info {
+  height: 100%;
+  max-width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: left;
+  margin: 0 5%;
+  gap: 50px;
+  background: url(Assets/Images/image-dots.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.info p,
+.info h1,
+.info button {
+  max-width: 484px;
+}
+
+.headline-image2 {
+  display: block;
+  width: 100%;
+}
+
+/* ==================== Works styles ==================== */
+
+.works {
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "title project-1 project-1"
+    "project-2 project-2 project-6"
+    "project-2 project-2 project-5"
+    "project-3 project-3 project-5"
+    "project-4 project-4 project-4";
+  grid-template-columns: 32% 36% 32%;
+}
+
+.works-title {
+  grid-area: title;
+  background-image: url(assets/Images/image-dots.svg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  align-items: center;
+  height: 100%;
+}
+
+.works-header {
+  width: fit-content;
+  font-size: 550%;
+  transform: rotate(90deg) rotateY(180deg) rotateX(180deg) translateY(-80px);
+}
+
+.project-container {
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.project-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.project-1 {
+  grid-area: project-1;
+}
+
+.project-2 {
+  grid-area: project-2;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.project-2 .project-container {
+  align-items: flex-end;
+}
+
+.project-image2 {
+  width: 100%;
+  height: 80%;
+}
+
+#project-shapes2 {
+  max-width: 51.37%;
+}
+
+.project-3 {
+  grid-area: project-3;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.project-image3 {
+  width: 100%;
+  height: 100%;
+}
+
+#project-shapes3 {
+  max-height: 50%;
+}
+
+.project-4 {
+  grid-area: project-4;
+  flex-direction: row;
+  width: 100%;
+}
+
+.project-4 .project-container {
+  width: 47.2%;
+}
+
+#project-shapes4 {
+  max-height: 20%;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.project-5 {
+  grid-area: project-5;
+  height: 100%;
+}
+
+.project-5 .project-container {
+  align-items: flex-start;
+}
+
+.project-image5 {
+  height: 209px;
+}
+
+#project-shapes5 {
+  width: 100%;
+  justify-content: flex-end;
+  padding-bottom: 50px;
+}
+
+#project-shapes5 img {
+  max-width: 100%;
+}
+
+.project-6 {
+  grid-area: project-6;
+  height: 255px;
+}
+
+/* ======================About myself=================================== */
+
+#about-myself {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 4%;
+  margin: 5% 14px 32px 16px;
+}
+
+#about-info {
+  width: 446px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+#about-header {
+  font-weight: 400;
+  font-size: 110px;
+  line-height: 100%;
+}
+
+#about-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+#about-button {
+  width: 254px;
+  height: 70px;
+}
+
+#abilities {
+  max-width: 578px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+/* for some reason I needed to put this in here to fix linter error */
+
+.contact-form ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#abilities ul,
+#ability-shape {
+  width: 200px;
+  max-width: 289px;
+  min-height: 289px;
+  flex-grow: 1;
+}
+
+#ability-shape {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+#ability-shape img {
+  width: 100%;
+  max-width: 222px;
+}
+
+/* ==================== Contact styles ==================== */
+
+.contact {
+  margin-top: 158px;
+  background: url(Assets/Shapes/image-geometry_6.svg), url(Assets/Shapes/image-geometry_7.svg), #f9f9fa;
+  background-position: top left, right bottom;
+  background-repeat: no-repeat;
+  background-size: 20%;
+  padding: 168px 13px 176px 17px;
+  gap: 40px;
+  align-items: center;
+}
+
+.contact-info {
+  gap: 40px;
+}
+
+.contact-form {
+  gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+  max-width: 548px;
+  align-items: center;
+}
+
+.contact-form ul li {
+  width: 48%;
+  flex-grow: 1;
+}
+
+/* ==================== Footer styles ==================== */
+
+footer {
+  flex-direction: row !important;
+  justify-content: space-between;
+  padding: 48px 160px;
+}
