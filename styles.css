@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap');
 
+/* ==================== Removed elements ================= */
+
+@media screen and (max-width: 767px) {
+  .headline-image2,
+  .shapes {
+    display: none !important;
+  }
+}
+
 /* ==================== General styles ================= */
 
 * {
@@ -10,6 +19,10 @@
   font-weight: 400;
   font-family: 'Poppins', sans-serif;
   color: #1a2236;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -35,8 +48,6 @@ main {
 
 .resume-link {
   color: #92dcdc;
-  max-width: 500px;
-  text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -50,7 +61,6 @@ main {
 }
 
 .social-links {
-  max-width: 500px;
   gap: 30px;
 }
 
@@ -60,8 +70,9 @@ main {
 }
 
 .primary-text {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", sans-serif;
   font-size: 50px;
+  color: #1a2236;
   line-height: 100%;
 }
 
@@ -143,31 +154,44 @@ main {
   border: 2px #1a2236 solid;
 }
 
+.max-width {
+  max-width: 500px;
+}
+
 /* ==================== header styles ==================== */
 
-.toolbar {
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  right: 0;
+header {
+  width: 100%;
 }
 
 .menu {
   margin: 19px 14px;
   font-size: 32px;
   cursor: pointer;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.nav-links {
+  display: none;
 }
 
 /* ==================== headline styles ==================== */
 
 .headline {
-  width: 100%;
+  width: 100vw;
   max-width: 500px;
 }
 
 .info {
   margin: 104px 14px 32px 16px;
   gap: 22px;
+}
+
+.headline-image {
+  width: 100%;
 }
 
 .headline-text {
@@ -180,9 +204,10 @@ main {
   width: 100%;
   max-width: 500px;
   align-items: center;
+  list-style: none;
 }
 
-.works h1 {
+.works-header {
   padding: 40px 32px 32px 16px;
   width: 100%;
 }
@@ -225,9 +250,8 @@ main {
 
 .project-image5 {
   background-image:
-    url(
-      assets/Projects/5/main.svg
-    );
+    url(assets/Projects/5/main.svg
+);
 }
 
 .project-image6 {
@@ -263,65 +287,74 @@ main {
   padding: 6px 10px;
 }
 
-/* ==================== about styles ==================== */
+/* ============================== about-myself styles ==================================== */
 
-.about {
-  padding: 56px 14px 0 16px;
-  width: 100%;
-  max-width: 500px;
+#about-myself {
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+  margin: 56px 14px 32px 16px;
 }
 
-.about-info {
-  gap: 20px;
+#about-text {
+  margin-top: 20px;
+  margin-bottom: 32px;
 }
 
-.cards {
-  margin-top: 27px;
-  list-style: none;
-  display: grid;
-  grid-template-columns: 100%;
-  justify-content: center;
+#about-button {
+  margin-bottom: 40px;
+}
+
+#abilities {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
-.cards > li {
-  height: 289px;
+.ability {
   width: 100%;
-  padding: 50px 0 50px 50px;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-}
-
-.cards h2 {
-  color: white;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.cards li li {
-  list-style: disc;
-  list-style-position: inside;
+  height: 289px;
+  list-style: inside;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-bottom: 53px;
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
   letter-spacing: -0.0525em;
-  color: white;
+  color: #fff;
 }
 
-.languages {
-  background-color: #1c52a8;
-  background-image: url(assets/Shapes/3.1.svg);
+.ability li {
+  color: #fff;
 }
 
-.frameworks {
-  background: #e2505c;
-  background-image: url(assets/Shapes/3.2.svg);
+.ability-title {
+  margin-bottom: 21px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
 }
 
-.skills {
-  background: #febf52;
-  background-image: url(assets/Shapes/3.3.svg);
+#languages {
+  background: url(assets/Images/languages.svg) #1c528a;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+#frameworks {
+  background: url(assets/Images/frameworks.svg) #e2505c;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+#skills {
+  background: url(assets/Images/skills.svg) #febf52;
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 /* ==================== Contact styles ==================== */
@@ -338,13 +371,12 @@ main {
 
 .contact-info {
   width: 100%;
-  max-width: 500px;
   gap: 20px;
 }
 
 .contact-form {
   width: 100%;
-  max-width: 500px;
+  ;
   gap: 20px;
 }
 
