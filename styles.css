@@ -19,6 +19,11 @@ body {
   align-items: center;
 }
 
+main {
+  width: 100%;
+  align-items: center;
+}
+
 .flex-row {
   display: flex;
 }
@@ -26,6 +31,32 @@ body {
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.resume-link {
+  color: #92dcdc;
+  max-width: 500px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  gap: 15px;
+  align-items: center;
+}
+
+.resume-link i {
+  color: #92dcdc;
+  width: 22px;
+}
+
+.social-links {
+  max-width: 500px;
+  gap: 30px;
+}
+
+.social-links i {
+  color: white;
+  font-size: 25px;
 }
 
 .primary-text {
@@ -291,4 +322,75 @@ body {
 .skills {
   background: #febf52;
   background-image: url(assets/Shapes/3.3.svg);
+}
+
+/* ==================== Contact styles ==================== */
+
+.contact {
+  width: 100%;
+  margin-top: 27px;
+  background: url(Assets/Shapes/1.svg) #f9f9fa;
+  background-repeat: no-repeat;
+  padding: 106px 13px 31px 17px;
+  gap: 14px;
+  align-items: center;
+}
+
+.contact-info {
+  width: 100%;
+  max-width: 500px;
+  gap: 20px;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  gap: 20px;
+}
+
+.contact-form ul {
+  list-style: none;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  height: 52px;
+  padding: 23px 0 8px 16px;
+  border: 1px solid #dfdfe0;
+  border-radius: 4px;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 112px;
+  padding: 14px 16px;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #7d7c84;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #1a2236;
+}
+
+.contact-form label {
+  font-size: 10px;
+  line-height: 15px;
+  color: #7d7c84;
+}
+
+/* ==================== Footer styles ==================== */
+footer {
+  width: 100%;
+  color: white;
+  background: #1a2236;
+  align-items: center;
+  padding: 28px 14px 36px 18px;
+  gap: 25px;
 }
