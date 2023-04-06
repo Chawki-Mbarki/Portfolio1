@@ -250,8 +250,9 @@ header {
 
 .project-image5 {
   background-image:
-    url(assets/Projects/5/main.svg
-);
+    url(
+      assets/Projects/5/main.svg
+    );
 }
 
 .project-image6 {
@@ -292,7 +293,6 @@ header {
 #about-myself {
   display: flex;
   flex-direction: column;
-  margin-top: 56px;
   margin: 56px 14px 32px 16px;
 }
 
@@ -376,7 +376,6 @@ header {
 
 .contact-form {
   width: 100%;
-  ;
   gap: 20px;
 }
 
