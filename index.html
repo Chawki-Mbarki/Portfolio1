@@ -7,18 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chawki Mbarki</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 768px)" />
   <script src="https://kit.fontawesome.com/c6f38472f5.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="flex-column">
   <header class="toolbar flex-row">
-    <nav class="menu">
-      <i class="fa-sharp fa-solid fa-bars"></i>
+    <nav>
+      <i class="fa-sharp fa-solid fa-bars menu"></i>
+      <ul class="nav-links">
+        <li><a href="#">Hello</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main class="flex-column">
-    <section class="headline flex-column">
+    <section class="headline max-width flex-column">
       <div class="info flex-column">
         <h1 class="primary-text">Chawki Mbarki</h1>
         <p class="secondary-text headline-text">Hello! I am a software developer! I can help you build a product,
@@ -29,14 +36,18 @@
           and have a project you need coded, don’t hesitate to contact me.</p>
         <button type="button" class="primary-button">Start Collaboration</button>
       </div>
-      <img src="Assets/Shapes/2.svg" alt="geometry-shape">
+      <div class="shape flex-row">
+        <img src="Assets/Images/Headline-image.svg" class="headline-image" alt="geometry-shapes">
+        <img src="Assets/Images/Headline-image2.svg" class="headline-image2" alt="geometry-shapes">
+      </div>
     </section>
 
-    <section class="works">
-      <h1 class="primary-text">Projects</h1>
-      <ul class="projects">
-
-        <li class="project flex-column">
+    <ul class="works max-width">
+      <li class="works-title flex-row">
+        <h1 class="primary-text works-header">Projects</h1>
+      </li>
+      <li class="project project-1 flex-column">
+        <div class="project-container flex-column">
           <div class="project-image project-image1">
           </div>
           <div class="project-info flex-column">
@@ -49,9 +60,11 @@
             <button type="button" class="primary-button dark-button">See this project <i
                 class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
+        </div>
+      </li>
 
-        <li class="project flex-column">
+      <li class="project project-2 flex-column">
+        <div class="project-container flex-column">
           <div class="project-image project-image2"> </div>
           <div class="project-info flex-column">
             <h2 class="project-name">Project name goes here</h2>
@@ -63,9 +76,12 @@
             <button type="button" class="primary-button dark-button">See this project <i
                 class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
+        </div>
+        <img class="shapes" id="project-shapes2" alt="" src="assets/Shapes/image-geometry_2.svg">
+      </li>
 
-        <li class="project flex-column">
+      <li class="project project-3 flex-column">
+        <div class="project-container flex-column">
           <div class="project-image project-image3"> </div>
           <div class="project-info flex-column">
             <h2 class="project-name">Project name goes here</h2>
@@ -77,9 +93,17 @@
             <button type="button" class="primary-button dark-button">See this project <i
                 class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
+        </div>
+        <div class="shapes flex-row" id="project-shapes3">
+          <img src="assets/Shapes/Shapep3 1.svg" alt="">
+      </li>
 
-        <li class="project flex-column">
+      <li class="project project-4 flex-column">
+        <div class="shapes flex-row" id="project-shapes4">
+          <img src="assets/Shapes/image-geometry_5.svg" alt="">
+          <img src="assets/Shapes/image-geometry_4.svg" alt="">
+        </div>
+        <div class="project-container flex-column">
           <div class="project-image project-image4"> </div>
           <div class="project-info flex-column">
             <h2 class="project-name">Project name goes here</h2>
@@ -91,9 +115,11 @@
             <button type="button" class="primary-button dark-button">See this project <i
                 class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
+        </div>
+      </li>
 
-        <li class="project flex-column">
+      <li class="project project-5 flex-column">
+        <div class="project-container flex-column">
           <div class="project-image project-image5"> </div>
           <div class="project-info flex-column">
             <h2 class="project-name">Project name goes here</h2>
@@ -104,9 +130,14 @@
             </ul>
             <button type="button" class="dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
+        </div>
+        <div class="shapes flex-row" id="project-shapes5">
+          <img src="assets/Shapes/Shape3 2.svg" alt="">
+        </div>
+      </li>
 
-        <li class="project flex-column">
+      <li class="project project-6 flex-column">
+        <div class="project-container flex-column">
           <div class="project-image project-image6"> </div>
           <div class="project-info flex-column">
             <h2 class="project-name">Project name goes here</h2>
@@ -117,11 +148,12 @@
             </ul>
             <button type="button" class="dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
-      </ul>
+        </div>
+      </li>
+    </ul>
     </section>
 
-    <section class="about flex-column">
+    <section class="about max-width flex-column">
       <div class="about-info flex-column">
         <h1 class="primary-text">About</h1>
         <p class="secondary-text headline-text">I can help you build a product , feature or website Look through some of
@@ -163,13 +195,13 @@
     </section>
 
     <section class="contact flex-column">
-      <div class="contact-info flex-column">
+      <div class="contact-info max-width flex-column">
         <h1 class="primary-text">Get started</h1>
         <p class="secondary-text headline-text">I'm always interested in hearing about new projects, so if you'd like to
           chat please get in touch.</p>
       </div>
 
-      <form class="contact-form flex-column" action="https://formspree.io/f/mzbqjqzq" method="POST">
+      <form class="contact-form max-width flex-column" action="https://formspree.io/f/mzbqjqzq" method="POST">
         <ul class="flex-column">
           <li>
             <label for="name">Your name</label><br>
@@ -191,8 +223,9 @@
   </main>
 
   <footer class="flex-column">
-    <a href="#" class="resume-link flex-row">Get my Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-    <div class="social-links flex-row">
+    <a href="#" class="resume-link max-width flex-row">Get my Resume <i
+        class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="social-links max-width flex-row">
       <i class="fa-brands fa-stack-overflow"></i>
       <i class="fa-brands fa-github"></i>
       <i class="fa-brands fa-twitter"></i>
