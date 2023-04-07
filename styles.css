@@ -26,7 +26,7 @@ a {
 }
 
 body {
-  background-image: url(/assets/shapes/1.svg);
+  background-image: url(assets/shapes/1.svg);
   background-repeat: no-repeat;
   background-color: white;
   align-items: center;
@@ -236,28 +236,28 @@ header {
 }
 
 .project-image1 {
-  background-image: url(/assets/projects/1/main.svg);
+  background-image: url(assets/projects/1/main.svg);
 }
 
 .project-image2 {
-  background-image: url(/assets/projects/2/main.jpeg);
+  background-image: url(assets/projects/2/main.jpeg);
 }
 
 .project-image3 {
-  background-image: url(/assets/projects/3/main.jpg);
+  background-image: url(assets/projects/3/main.jpg);
 }
 
 .project-image4 {
-  background-image: url(/assets/projects/4/main.svg);
+  background-image: url(assets/projects/4/main.svg);
 }
 
 .project-image5 {
   background-image:
-    url(/assets/projects/5/main.svg);
+    url(assets/projects/5/main.svg);
 }
 
 .project-image6 {
-  background-image: url(/assets/projects/6/main.svg);
+  background-image: url(assets/projects/6/main.svg);
 }
 
 .project-info {
@@ -341,19 +341,19 @@ header {
 }
 
 #languages {
-  background: url(/assets/shapes/3.1.svg) #1c528a;
+  background: url(assets/shapes/3.1.svg) #1c528a;
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 
 #frameworks {
-  background: url(/assets/shapes/3.2.svg) #e2505c;
+  background: url(assets/shapes/3.2.svg) #e2505c;
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 
 #skills {
-  background: url(/assets/shapes/3.3.svg) #febf52;
+  background: url(assets/shapes/3.3.svg) #febf52;
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -363,7 +363,7 @@ header {
 .contact {
   width: 100%;
   margin-top: 27px;
-  background: url(/assets/shapes/1.svg) #f9f9fa;
+  background: url(assets/shapes/1.svg) #f9f9fa;
   background-repeat: no-repeat;
   padding: 106px 13px 31px 17px;
   gap: 14px;
