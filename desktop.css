@@ -2,8 +2,7 @@
 
 .menu,
 .geometry-shape1,
-.headline-image,
-.project-info {
+.headline-image {
   display: none !important;
 }
 
@@ -25,6 +24,36 @@ body {
 
 .max-width {
   max-width: 1440px;
+}
+
+.dark-button {
+  max-height: 51px;
+  max-width: 212px;
+  background: white;
+  color: #1a2236;
+  border: 1px solid #1a2236;
+  transition: all 0.3s;
+}
+
+.dark-button i {
+  background: white;
+  color: #1a2236;
+  transition: all 0.3s;
+}
+
+.dark-button:hover {
+  background: #1a2236;
+  color: white;
+  border: 1px solid white;
+}
+
+.dark-button:hover i {
+  background: #1a2236;
+  color: white;
+}
+
+.dark-button:active {
+  border: 2px solid white;
 }
 
 /* ==================== header styles ==================== */
@@ -78,7 +107,7 @@ header {
   text-align: left;
   margin: 0 5%;
   gap: 50px;
-  background: url(Assets/Images/image-dots.svg);
+  background: url(assets/images/image-dots.svg);
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -99,28 +128,96 @@ header {
 .works {
   width: 100%;
   display: grid;
-  grid-template-areas:
-    "title project-1 project-1"
-    "project-2 project-2 project-6"
-    "project-2 project-2 project-5"
-    "project-3 project-3 project-5"
-    "project-4 project-4 project-4";
-  grid-template-columns: 32% 36% 32%;
+  grid-template-columns: 32.291% 23.263% 12.152% 20.069% 12.222%;
+  grid-template-rows: 33.941% 4.866% 11.557% 4.866% 11.557% 6.082% 4.587% 6.057% 7.542% 8.878%;
+  height: 150vh;
+  max-height: 1644px;
+  gap: 0;
 }
 
 .works-title {
-  grid-area: title;
-  background-image: url(assets/Images/image-dots.svg);
+  grid-area: 1/1/2/2;
+  background-image: url(assets/images/image-dots.svg);
   background-position: top right;
   background-repeat: no-repeat;
   align-items: center;
+}
+
+.project-1 {
+  grid-area: 1/2/2/6;
+}
+
+.project-2 {
+  grid-area: 3/1/5/2;
+}
+
+.project-3 {
+  grid-area: 5/1/9/3;
+  flex-direction: row;
+}
+
+.project-4 {
+  grid-area: 9/3/11/5;
+  flex-direction: row;
+}
+
+.project-5 {
+  grid-area: 4/4/6/6;
+}
+
+.project-6 {
+  grid-area: 2/4/4/6;
+}
+
+.shape-2 {
+  grid-area: 2/2/5/4;
+  align-items: flex-end;
+}
+
+.shape-3 {
+  grid-area: 5/3/9/4;
+  align-items: flex-end;
+}
+
+.shape-4 {
+  grid-area: 9/1/10/3;
+  justify-content: space-between;
+}
+
+.shape-5 {
+  grid-area: 6/4/8/6;
+  justify-content: flex-end;
+}
+
+.works-title,
+.project-1,
+.project-2,
+.project-3,
+.project-4,
+.project-5,
+.project-6,
+.shape-2,
+.shape-3,
+.shape-4,
+.shape-5 {
+  max-width: 100%;
   height: 100%;
+}
+
+.shape-2 img,
+.shape-3 img {
+  width: 100%;
 }
 
 .works-header {
   width: fit-content;
-  font-size: 550%;
+  font-size: 110px;
+  line-height: 100%;
   transform: rotate(90deg) rotateY(180deg) rotateX(180deg) translateY(-80px);
+}
+
+.project {
+  height: 100% !important;
 }
 
 .project-container {
@@ -129,6 +226,8 @@ header {
   flex-direction: row;
   align-items: flex-end;
   cursor: pointer;
+  position: relative;
+  overflow-y: hidden;
 }
 
 .project-image {
@@ -139,86 +238,32 @@ header {
   height: 100%;
 }
 
-.project-1 {
-  grid-area: project-1;
-}
-
-.project-2 {
-  grid-area: project-2;
-  flex-direction: row;
-  align-items: flex-end;
-}
-
-.project-2 .project-container {
-  align-items: flex-end;
-}
-
-.project-image2 {
+.project-info {
+  position: absolute;
+  flex-direction: column;
+  padding: 6.25%;
   width: 100%;
-  height: 80%;
+  justify-content: center;
+  transform: translateY(+100%);
+  transition: all 0.4s ease-out;
+  background: rgba(26, 34, 54, 0.95);
+  backdrop-filter: blur(12px);
+  font-size: calc(1rem + 1vw);
+  min-height: 200px;
 }
 
-#project-shapes2 {
-  max-width: 51.37%;
+.project-container:hover .project-info {
+  transform: translateY(0);
 }
 
-.project-3 {
-  grid-area: project-3;
-  flex-direction: row;
-  align-items: flex-end;
+.project-name {
+  font-size: calc(1.5vh + 0.4vw);
+  line-height: 100%;
+  font-weight: 700;
 }
 
-.project-image3 {
-  width: 100%;
-  height: 100%;
-}
-
-#project-shapes3 {
-  max-height: 50%;
-}
-
-.project-4 {
-  grid-area: project-4;
-  flex-direction: row;
-  width: 100%;
-}
-
-.project-4 .project-container {
-  width: 47.2%;
-}
-
-#project-shapes4 {
-  max-height: 20%;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.project-5 {
-  grid-area: project-5;
-  height: 100%;
-}
-
-.project-5 .project-container {
-  align-items: flex-start;
-}
-
-.project-image5 {
-  height: 209px;
-}
-
-#project-shapes5 {
-  width: 100%;
-  justify-content: flex-end;
-  padding-bottom: 50px;
-}
-
-#project-shapes5 img {
-  max-width: 100%;
-}
-
-.project-6 {
-  grid-area: project-6;
-  height: 255px;
+.project-tags {
+  margin: 3.25% 0 3.25% 0;
 }
 
 /* ======================About myself=================================== */
@@ -296,7 +341,7 @@ header {
 
 .contact {
   margin-top: 158px;
-  background: url(Assets/Shapes/image-geometry_6.svg), url(Assets/Shapes/image-geometry_7.svg), #f9f9fa;
+  background: url(assets/shapes/image-geometry_6.svg), url(assets/shapes/image-geometry_7.svg), #f9f9fa;
   background-position: top left, right bottom;
   background-repeat: no-repeat;
   background-size: 20%;
