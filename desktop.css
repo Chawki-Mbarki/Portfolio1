@@ -228,6 +228,11 @@ header {
   cursor: pointer;
   position: relative;
   overflow-y: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-container:hover {
+  transform: scale(1.01);
 }
 
 .project-image {
@@ -367,6 +372,18 @@ header {
 .contact-form ul li {
   width: 48%;
   flex-grow: 1;
+}
+
+.contact-form label {
+  padding-left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form li:focus-within label,
+.contact-form li:hover label {
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: bolder;
 }
 
 /* ==================== Footer styles ==================== */
