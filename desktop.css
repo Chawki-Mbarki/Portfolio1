@@ -1,0 +1,378 @@
+/* ==================== Removed elements ================= */
+
+.menu,
+.geometry-shape1,
+.headline-image {
+  display: none !important;
+}
+
+/* ==================== General styles ================= */
+
+body {
+  background: none;
+}
+
+.primary-text {
+  font-size: 110px;
+  line-height: 100%;
+}
+
+.primary-button {
+  max-width: 254px;
+  height: 70px;
+}
+
+.max-width {
+  max-width: 1440px;
+}
+
+.dark-button {
+  max-height: 51px;
+  max-width: 212px;
+  background: white;
+  color: #1a2236;
+  border: 1px solid #1a2236;
+  transition: all 0.3s;
+}
+
+.dark-button i {
+  background: white;
+  color: #1a2236;
+  transition: all 0.3s;
+}
+
+.dark-button:hover {
+  background: #1a2236;
+  color: white;
+  border: 1px solid white;
+}
+
+.dark-button:hover i {
+  background: #1a2236;
+  color: white;
+}
+
+.dark-button:active {
+  border: 2px solid white;
+}
+
+/* ==================== header styles ==================== */
+
+header {
+  height: 100px;
+  padding: 38px 0;
+  justify-content: center;
+  box-shadow: 0 0.5px 0 #dddfe6;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+.nav-links a {
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a2236;
+  background:
+    linear-gradient(to right, transparent, transparent),
+    linear-gradient(to right, black, black, black);
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-size: 0 0.1em, 100% 0.1em;
+}
+
+/* ==================== headline styles ==================== */
+
+.headline {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 5%;
+}
+
+.info {
+  height: 100%;
+  max-width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: left;
+  margin: 0 5%;
+  gap: 50px;
+  background: url(assets/images/image-dots.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.info p,
+.info h1,
+.info button {
+  max-width: 484px;
+}
+
+.headline-image2 {
+  display: block;
+  width: 100%;
+}
+
+/* ==================== Works styles ==================== */
+
+.works {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 32.291% 23.263% 12.152% 20.069% 12.222%;
+  grid-template-rows: 33.941% 4.866% 11.557% 4.866% 11.557% 6.082% 4.587% 6.057% 7.542% 8.878%;
+  height: 150vh;
+  max-height: 1644px;
+  gap: 0;
+}
+
+.works-title {
+  grid-area: 1/1/2/2;
+  background-image: url(assets/images/image-dots.svg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  align-items: center;
+}
+
+.project-1 {
+  grid-area: 1/2/2/6;
+}
+
+.project-2 {
+  grid-area: 3/1/5/2;
+}
+
+.project-3 {
+  grid-area: 5/1/9/3;
+  flex-direction: row;
+}
+
+.project-4 {
+  grid-area: 9/3/11/5;
+  flex-direction: row;
+}
+
+.project-5 {
+  grid-area: 4/4/6/6;
+}
+
+.project-6 {
+  grid-area: 2/4/4/6;
+}
+
+.shape-2 {
+  grid-area: 2/2/5/4;
+  align-items: flex-end;
+}
+
+.shape-3 {
+  grid-area: 5/3/9/4;
+  align-items: flex-end;
+}
+
+.shape-4 {
+  grid-area: 9/1/10/3;
+  justify-content: space-between;
+}
+
+.shape-5 {
+  grid-area: 6/4/8/6;
+  justify-content: flex-end;
+}
+
+.works-title,
+.project-1,
+.project-2,
+.project-3,
+.project-4,
+.project-5,
+.project-6,
+.shape-2,
+.shape-3,
+.shape-4,
+.shape-5 {
+  max-width: 100%;
+  height: 100%;
+}
+
+.shape-2 img,
+.shape-3 img {
+  width: 100%;
+}
+
+.works-header {
+  width: fit-content;
+  font-size: 110px;
+  line-height: 100%;
+  transform: rotate(90deg) rotateY(180deg) rotateX(180deg) translateY(-80px);
+}
+
+.project {
+  height: 100% !important;
+}
+
+.project-container {
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  align-items: flex-end;
+  cursor: pointer;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.project-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.project-info {
+  position: absolute;
+  flex-direction: column;
+  padding: 6.25%;
+  width: 100%;
+  justify-content: center;
+  transform: translateY(+100%);
+  transition: all 0.4s ease-out;
+  background: rgba(26, 34, 54, 0.95);
+  backdrop-filter: blur(12px);
+  font-size: calc(1rem + 1vw);
+  min-height: 200px;
+}
+
+.project-container:hover .project-info {
+  transform: translateY(0);
+}
+
+.project-name {
+  font-size: calc(1.5vh + 0.4vw);
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.project-tags {
+  margin: 3.25% 0 3.25% 0;
+}
+
+/* ======================About myself=================================== */
+
+#about-myself {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 4%;
+  margin: 5% 14px 32px 16px;
+}
+
+#about-info {
+  width: 446px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+#about-header {
+  font-weight: 400;
+  font-size: 110px;
+  line-height: 100%;
+}
+
+#about-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+#about-button {
+  width: 254px;
+  height: 70px;
+}
+
+#abilities {
+  max-width: 578px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+/* for some reason I needed to put this in here to fix linter error */
+
+.contact-form ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#abilities ul,
+#ability-shape {
+  width: 200px;
+  max-width: 289px;
+  min-height: 289px;
+  flex-grow: 1;
+}
+
+#ability-shape {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+#ability-shape img {
+  width: 100%;
+  max-width: 222px;
+}
+
+/* ==================== Contact styles ==================== */
+
+.contact {
+  margin-top: 158px;
+  background: url(assets/shapes/image-geometry_6.svg), url(assets/shapes/image-geometry_7.svg), #f9f9fa;
+  background-position: top left, right bottom;
+  background-repeat: no-repeat;
+  background-size: 20%;
+  padding: 168px 13px 176px 17px;
+  gap: 40px;
+  align-items: center;
+}
+
+.contact-info {
+  gap: 40px;
+}
+
+.contact-form {
+  gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+  max-width: 548px;
+  align-items: center;
+}
+
+.contact-form ul li {
+  width: 48%;
+  flex-grow: 1;
+}
+
+/* ==================== Footer styles ==================== */
+
+footer {
+  flex-direction: row !important;
+  justify-content: space-between;
+  padding: 48px 160px;
+}

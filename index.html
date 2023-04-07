@@ -7,18 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chawki Mbarki</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 768px)" />
   <script src="https://kit.fontawesome.com/c6f38472f5.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="flex-column">
   <header class="toolbar flex-row">
-    <nav class="menu">
-      <i class="fa-sharp fa-solid fa-bars"></i>
+    <nav>
+      <i class="fa-sharp fa-solid fa-bars menu"></i>
+      <ul class="nav-links">
+        <li><a href="#">Hello</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
   <main class="flex-column">
-    <section class="headline flex-column">
+    <section class="headline max-width flex-column">
       <div class="info flex-column">
         <h1 class="primary-text">Chawki Mbarki</h1>
         <p class="secondary-text headline-text">Hello! I am a software developer! I can help you build a product,
@@ -29,14 +36,18 @@
           and have a project you need coded, don’t hesitate to contact me.</p>
         <button type="button" class="primary-button">Start Collaboration</button>
       </div>
-      <img src="Assets/Shapes/2.svg" alt="geometry-shape">
+      <div class="shape flex-row">
+        <img src="Assets/Images/Headline-image.svg" class="headline-image" alt="geometry-shapes">
+        <img src="Assets/Images/Headline-image2.svg" class="headline-image2" alt="geometry-shapes">
+      </div>
     </section>
 
-    <section class="works">
-      <h1 class="primary-text">Projects</h1>
-      <ul class="projects">
-
-        <li class="project flex-column">
+    <ul class="works max-width">
+      <li class="works-title flex-row">
+        <h1 class="primary-text works-header">Projects</h1>
+      </li>
+      <li class="project project-1 flex-column">
+        <div class="project-container flex-column">
           <div class="project-image project-image1">
           </div>
           <div class="project-info flex-column">
@@ -49,9 +60,11 @@
             <button type="button" class="primary-button dark-button">See this project <i
                 class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
+        </div>
+      </li>
 
-        <li class="project flex-column">
+      <li class="project project-2 flex-column">
+        <div class="project-container flex-column">
           <div class="project-image project-image2"> </div>
           <div class="project-info flex-column">
             <h2 class="project-name">Project name goes here</h2>
@@ -63,9 +76,11 @@
             <button type="button" class="primary-button dark-button">See this project <i
                 class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
+        </div>
+      </li>
 
-        <li class="project flex-column">
+      <li class="project project-3 flex-column">
+        <div class="project-container flex-column">
           <div class="project-image project-image3"> </div>
           <div class="project-info flex-column">
             <h2 class="project-name">Project name goes here</h2>
@@ -77,9 +92,11 @@
             <button type="button" class="primary-button dark-button">See this project <i
                 class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
+        </div>
+      </li>
 
-        <li class="project flex-column">
+      <li class="project project-4 flex-column">
+        <div class="project-container flex-column">
           <div class="project-image project-image4"> </div>
           <div class="project-info flex-column">
             <h2 class="project-name">Project name goes here</h2>
@@ -91,9 +108,11 @@
             <button type="button" class="primary-button dark-button">See this project <i
                 class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
+        </div>
+      </li>
 
-        <li class="project flex-column">
+      <li class="project project-5 flex-column">
+        <div class="project-container flex-column">
           <div class="project-image project-image5"> </div>
           <div class="project-info flex-column">
             <h2 class="project-name">Project name goes here</h2>
@@ -104,9 +123,11 @@
             </ul>
             <button type="button" class="dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
+        </div>
+      </li>
 
-        <li class="project flex-column">
+      <li class="project project-6 flex-column">
+        <div class="project-container flex-column">
           <div class="project-image project-image6"> </div>
           <div class="project-info flex-column">
             <h2 class="project-name">Project name goes here</h2>
@@ -117,59 +138,74 @@
             </ul>
             <button type="button" class="dark-button">See this project <i class="fa-solid fa-arrow-right"></i></i>
           </div>
-        </li>
-      </ul>
+        </div>
+      </li>
+
+      <li class="shapes shape-2 flex-row">
+        <img src="assets/Shapes/image-geometry_2.svg" alt="geometry-shape">
+      </li>
+
+      <li class="shapes shape-3 flex-row">
+        <img src="assets/Shapes/Shapep3 1.svg" alt="geometry-shape">
+      </li>
+
+      <li class="shapes shape-4 flex-row">
+        <img src="assets/Shapes/image-geometry_5.svg" alt="">
+        <img src="assets/Shapes/image-geometry_4.svg" alt="">
+      </li>
+
+      <li class="shapes shape-5 flex-row">
+        <img src="assets/Shapes/Shape3 2.svg" alt="">
+      </li>
+
+    </ul>
     </section>
 
-    <section class="about flex-column">
-      <div class="about-info flex-column">
-        <h1 class="primary-text">About</h1>
-        <p class="secondary-text headline-text">I can help you build a product , feature or website Look through some of
-          my work and experience! If you like what you see and have a project you need coded, don’t hesitate to contact
-          me.
-        </p>
-        <button type="button" class="primary-button">Get my CV <i class="fa-regular fa-circle-down"></i></button>
+    <section class="max-width" id="about-myself">
+      <div id="about-info">
+        <h1 id="about-header" class="primary-text">About</h1>
+        <p id="about-text" class="secondary-text">I can help you build a product , feature or website Look through some
+          of my work and experience! If you like what you see and have a project you need coded, don’t hesitate to
+          contact me.</p>
+        <button id="about-button" class="primary-button">Get my CV<i
+            class="fa-sharp fa-solid fa-circle-down"></i></button>
       </div>
-      <ul class="cards">
-        <li class="languages">
-          <h2>Languages</h2><br>
-          <ul>
-            <li>JavaScript (ES5/ES6)</li>
-            <li>Ruby</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </li>
-        <li class="frameworks">
-          <h2>Frameworks</h2><br>
-          <ul>
-            <li>React.js</li>
-            <li>Ruby on rails</li>
-            <li>RSpec</li>
-            <li>Capibara</li>
-          </ul>
-        </li>
-        <li class="skills">
-          <h2>Skills</h2><br>
-          <ul>
-            <li>Database Management</li>
-            <li>CLI</li>
-            <li>API Design</li>
-            <li>Version Control</li>
-            <li>Web Development</li>
-          </ul>
-        </li>
-      </ul>
+      <div id="abilities">
+        <ul id="languages" class="ability">
+          <h3 class="ability-title">Languages</h3>
+          <li>JavaScript (ES6+)</li>
+          <li>Ruby</li>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+        <ul id="frameworks" class="ability">
+          <h3 class="ability-title">FrameWorks</h3>
+          <li>React.js</li>
+          <li>Ruby on Rails</li>
+          <li>RSpec</li>
+          <li>Capibara</li>
+        </ul>
+        <ul id="skills" class="ability">
+          <h3 class="ability-title">Skills</h3>
+          <li>Database Management</li>
+          <li>API Design</li>
+          <li>Version Control</li>
+          <li>Web Development</li>
+        </ul>
+        <ul class="shapes" id="ability-shape">
+          <img alt="" src="assets/Shapes/image_dots_with_teal.svg">
+        </ul>
+      </div>
     </section>
 
     <section class="contact flex-column">
-      <div class="contact-info flex-column">
+      <div class="contact-info max-width flex-column">
         <h1 class="primary-text">Get started</h1>
         <p class="secondary-text headline-text">I'm always interested in hearing about new projects, so if you'd like to
           chat please get in touch.</p>
       </div>
 
-      <form class="contact-form flex-column" action="https://formspree.io/f/mzbqjqzq" method="POST">
+      <form class="contact-form max-width flex-column" action="https://formspree.io/f/mzbqjqzq" method="POST">
         <ul class="flex-column">
           <li>
             <label for="name">Your name</label><br>
@@ -200,7 +236,6 @@
       <i class="fa-regular fa-hand-peace"></i>
     </div>
   </footer>
-
 </body>
 <script src="script.js"></script>
 
