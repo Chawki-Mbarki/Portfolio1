@@ -369,6 +369,17 @@ header {
   flex-grow: 1;
 }
 
+.contact-form label {
+  padding-left: 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form li:focus-within label, .contact-form li:hover label{
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
 /* ==================== Footer styles ==================== */
 
 footer {
