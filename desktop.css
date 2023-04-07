@@ -228,6 +228,11 @@ header {
   cursor: pointer;
   position: relative;
   overflow-y: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-container:hover {
+  transform: scale(1.01);
 }
 
 .project-image {
