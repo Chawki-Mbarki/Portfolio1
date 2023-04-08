@@ -107,7 +107,7 @@ header {
   text-align: left;
   margin: 0 5%;
   gap: 50px;
-  background: url(/assets/images/image-dots.svg);
+  background: url(assets/images/image-dots.svg);
   background-repeat: no-repeat;
   background-position: bottom right;
 }
@@ -137,7 +137,7 @@ header {
 
 .works-title {
   grid-area: 1/1/2/2;
-  background-image: url(/assets/images/image-dots.svg);
+  background-image: url(assets/images/image-dots.svg);
   background-position: top right;
   background-repeat: no-repeat;
   align-items: center;
@@ -228,6 +228,11 @@ header {
   cursor: pointer;
   position: relative;
   overflow-y: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.project-container:hover {
+  transform: scale(1.01);
 }
 
 .project-image {
@@ -341,7 +346,7 @@ header {
 
 .contact {
   margin-top: 158px;
-  background: url(/assets/shapes/image-geometry_6.svg), url(/assets/shapes/image-geometry_7.svg), #f9f9fa;
+  background: url(assets/shapes/image-geometry_6.svg), url(assets/shapes/image-geometry_7.svg), #f9f9fa;
   background-position: top left, right bottom;
   background-repeat: no-repeat;
   background-size: 20%;
@@ -367,6 +372,18 @@ header {
 .contact-form ul li {
   width: 48%;
   flex-grow: 1;
+}
+
+.contact-form label {
+  padding-left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form li:focus-within label,
+.contact-form li:hover label {
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: bolder;
 }
 
 /* ==================== Footer styles ==================== */
