@@ -185,7 +185,6 @@ header {
 
 .headline {
   width: 100vw;
-  max-width: 500px;
 }
 
 .info {
@@ -210,9 +209,8 @@ header {
   list-style: none;
 }
 
-.works-header {
+.works-title h1 {
   padding: 40px 32px 32px 16px;
-  width: 100%;
 }
 
 .projects {
@@ -266,7 +264,7 @@ header {
   background-color: #1a2236;
 }
 
-.project-name {
+.project-name h2 {
   color: white;
   font-weight: 300;
   font-size: 20px;
@@ -291,8 +289,6 @@ header {
 /* ============================== about-myself styles ==================================== */
 
 #about-myself {
-  display: flex;
-  flex-direction: column;
   margin: 56px 14px 32px 16px;
 }
 
