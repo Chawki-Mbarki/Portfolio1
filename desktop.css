@@ -107,7 +107,7 @@ header {
   justify-content: center;
   align-items: flex-start;
   text-align: left;
-  gap: 0px;
+  gap: 0;
   padding: 0 12.737% 0 21.6802%;
   margin: 0;
   background: url(assets/images/image-dots.svg);
@@ -144,11 +144,11 @@ header {
 }
 
 .works-title h1 {
-  transform-origin:center ;
+  transform-origin: center;
   transform: rotate(-90deg) translateX(-35%) translateY(-0%);
   padding: 0;
   height: min-content;
-  box-sizing:content-box;
+  box-sizing: content-box;
 }
 
 .project-1 {
@@ -208,7 +208,6 @@ header {
 .shape-4,
 .shape-5 {
   height: 100%;
-  
 }
 
 .shape-2 img,
@@ -239,7 +238,7 @@ header {
 .project-info {
   position: absolute;
   flex-direction: column;
-  height: 80.740%;
+  height: 80.74%;
   width: 100%;
   padding: 6.25% 5.161% 6.25% 6.25%;
   transform: translateY(+100%);
@@ -253,7 +252,7 @@ header {
   height: 63.261%;
 }
 
-.project-container:hover  .project-info {
+.project-container:hover .project-info {
   transform: translateY(+0%);
 }
 
@@ -285,6 +284,7 @@ header {
   width: 100%;
   max-width: 212px;
 }
+
 /* ======================About myself=================================== */
 
 #about-myself {
