@@ -286,11 +286,11 @@ header {
 }
 
 .project-image {
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .project-container:hover .project-image {
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 /* ======================About myself=================================== */
