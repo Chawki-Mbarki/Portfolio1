@@ -323,8 +323,8 @@ header {
   color: #fff;
 }
 
-.ability h3 {
-  list-style: none;
+.ability h2 {
+  margin: 0;
 }
 
 .ability li {
