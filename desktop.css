@@ -224,7 +224,7 @@ header {
   align-items: flex-end;
   cursor: pointer;
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .project-image {
@@ -252,7 +252,7 @@ header {
   height: 63.261%;
 }
 
-.project-container:hover .project-info {
+.project-container:hover .project-info, .project-container:focus-within .project-info{
   transform: translateY(+0%);
 }
 
@@ -283,6 +283,14 @@ header {
   height: 51px;
   width: 100%;
   max-width: 212px;
+}
+
+.project-image {
+  transition: 0.3s;
+}
+
+.project-container:hover .project-image {
+  transform: scale(1.1);
 }
 
 /* ======================About myself=================================== */
