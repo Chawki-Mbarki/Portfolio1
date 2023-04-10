@@ -16,16 +16,16 @@
     <nav>
       <i class="fa-sharp fa-solid fa-bars menu"></i>
       <ul class="nav-links">
-        <li><a href="#">Hello</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#headline" title="Headline Section">Hello</a></li>
+        <li><a href="#projects" title="Projects Section">projects</a></li>
+        <li><a href="#about" title="About Section">About</a></li>
+        <li><a href="#contact" title="Contact Section">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="flex-column">
-    <section class="headline max-width flex-column">
+    <section id="headline" class="headline max-width flex-column">
       <div class="info flex-column">
         <h1 class="primary-text">Chawki Mbarki</h1>
         <p class="secondary-text headline-text">Hello! I am a software developer! I can help you build a product,
@@ -42,7 +42,7 @@
       </div>
     </section>
 
-    <ul class="works max-width">
+    <ul id="projects" class="works max-width">
       <li class="works-title flex-row">
         <h2 class="primary-text works-header">Projects</h2>
       </li>
@@ -174,7 +174,7 @@
     </ul>
 
 
-    <section class="max-width flex-column" id="about-myself">
+    <section  id="about" class="max-width flex-column">
       <div id="about-info">
         <h2 id="about-header" class="primary-text">About</h2>
         <p id="about-text" class="secondary-text">I can help you build a product , feature or website Look through some
@@ -227,7 +227,7 @@
           chat please get in touch.</p>
       </div>
 
-      <form class="contact-form max-width flex-column" action="https://formspree.io/f/mzbqjqzq" method="POST">
+      <form id="contact" class="contact-form max-width flex-column" action="https://formspree.io/f/mzbqjqzq" method="POST">
         <ul class="flex-column">
           <li>
             <label for="name">Your name</label><br>
@@ -248,14 +248,14 @@
     </section>
   </main>
   <footer class="flex-column">
-    <a href="#" class="resume-link flex-row">Get my Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <a href="#" class="resume-link flex-row" title="Get my CV">Get my Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
     <div class="social-links flex-row">
-      <a href="#"><i class="fa-brands fa-stack-overflow"></i></a>
-      <a href="https://github.com/chawkimbarki"><i class="fa-brands fa-github"></i></a>
-      <a href="https://twitter.com/Chawki__Mbarki"><i class="fa-brands fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/chawki-mbarki-a77546202/"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#"><i class="fa-sharp fa-solid fa-m"></i></a>
-      <a href="#"><i class="fa-regular fa-hand-peace"></i></a>
+      <a href="#" title="Visit Stack Overflow"><i class="fa-brands fa-stack-overflow"></i></a>
+      <a href="https://github.com/chawkimbarki" title="Visit GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://twitter.com/Chawki__Mbarki" title="Visit Twitter"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/chawki-mbarki-a77546202/" title="Visit linkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#" title="Visit M"><i class="fa-sharp fa-solid fa-m"></i></a>
+      <a href="#" title="Visit idk"><i class="fa-regular fa-hand-peace"></i></a>
     </div>
   </footer>
   <script src="script.js"></script>
