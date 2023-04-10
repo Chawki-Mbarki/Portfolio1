@@ -143,7 +143,7 @@ header {
   background-repeat: no-repeat;
 }
 
-.works-title h1 {
+.works-title h2 {
   transform-origin: center;
   transform: rotate(-90deg) translateX(-35%) translateY(-0%);
   padding: 0;
@@ -256,7 +256,7 @@ header {
   transform: translateY(+0%);
 }
 
-.project-name h2 {
+.project-name h3 {
   font-size: 2.777vw;
   font-weight: 700;
   line-height: 80%;
@@ -265,7 +265,7 @@ header {
   text-overflow: ellipsis;
 }
 
-.project-1 .project-name h2 {
+.project-1 .project-name h3 {
   font-size: calc(4.166vw);
 }
 
@@ -414,11 +414,11 @@ footer {
     font-size: 110px;
   }
 
-  .project-name h2 {
+  .project-name h3 {
     font-size: 40px;
   }
 
-  .project-1 .project-name h2 {
+  .project-1 .project-name h3 {
     font-size: 60px;
   }
 
