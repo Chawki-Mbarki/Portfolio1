@@ -232,7 +232,7 @@ nav {
   align-items: flex-end;
   cursor: pointer;
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .project-image {
@@ -241,6 +241,7 @@ nav {
   background-position: center;
   width: 100%;
   height: 100%;
+  transition: 0.5s;
 }
 
 .project-info {
@@ -260,7 +261,7 @@ nav {
   height: 63.261%;
 }
 
-.project-container:hover .project-info {
+.project-container:hover .project-info, .project-container:focus-within .project-info{
   transform: translateY(+0%);
 }
 
@@ -293,15 +294,12 @@ nav {
   max-width: 212px;
 }
 
-.project-image {
-  transition: 0.5s;
-}
-
 .project-container:hover .project-image {
   transform: scale(1.5);
 }
 
 /* ======================About myself=================================== */
+
 #about {
   flex-direction: row-reverse;
   justify-content: center;
