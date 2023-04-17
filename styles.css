@@ -244,6 +244,8 @@ nav img {
   max-height: 100%;
 }
 
+.display-nav {
+  transform: translateY(0%);
 }
 
 /* ==================== headline styles ==================== */
