@@ -261,7 +261,8 @@ nav {
   height: 63.261%;
 }
 
-.project-container:hover .project-info, .project-container:focus-within .project-info{
+.project-container:hover .project-info,
+.project-container:focus-within .project-info {
   transform: translateY(+0%);
 }
 
