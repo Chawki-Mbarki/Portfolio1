@@ -293,6 +293,15 @@ nav {
   max-width: 212px;
 }
 
+.project-image {
+  transition: 0.5s;
+}
+
+.project-container:hover .project-image {
+  transform: scale(1.5);
+}
+
+/* ======================About myself=================================== */
 #about {
   flex-direction: row-reverse;
   justify-content: center;
