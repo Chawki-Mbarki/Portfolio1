@@ -260,10 +260,6 @@ nav {
   height: 63.261%;
 }
 
-.project-container:hover .project-info {
-  transform: translateY(+0%);
-}
-
 .project-name h3 {
   font-size: 2.777vw;
   font-weight: 700;
@@ -271,6 +267,10 @@ nav {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.project-container:hover .project-info {
+  transform: translateY(+0%);
 }
 
 .project-1 .project-name h3 {
