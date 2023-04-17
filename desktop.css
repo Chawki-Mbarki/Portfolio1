@@ -293,8 +293,6 @@ nav {
   max-width: 212px;
 }
 
-/* ======================About myself=================================== */
-
 #about {
   flex-direction: row-reverse;
   justify-content: center;
