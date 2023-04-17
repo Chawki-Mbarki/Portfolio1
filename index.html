@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hi, I'm Chawki Mbarki, a web developer and designer. Welcome to my portfolio website, where you can see some of the projects I've worked on and the skills I've learned. You can also find out more about me, my hobbies, and my goals. If you want to get in touch with me, you can use the contact form or follow me on social media. I'm always open to new opportunities and collaborations. Thank you for visiting my website and I hope you enjoy it. 😊">
+  <meta name="description"
+    content="Hi, I'm Chawki Mbarki, a web developer and designer. Welcome to my portfolio website, where you can see some of the projects I've worked on and the skills I've learned. You can also find out more about me, my hobbies, and my goals. If you want to get in touch with me, you can use the contact form or follow me on social media. I'm always open to new opportunities and collaborations. Thank you for visiting my website and I hope you enjoy it. 😊">
   <title>Chawki Mbarki</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 768px)">
@@ -14,15 +15,24 @@
 
 <body class="flex-column">
   <header class="toolbar flex-row">
-    <nav>
+    <div class="navigation">
       <i class="fa-sharp fa-solid fa-bars menu"></i>
-      <ul class="nav-links">
-        <li><a href="#headline" title="Headline Section">Hello</a></li>
-        <li><a href="#projects" title="Projects Section">projects</a></li>
-        <li><a href="#about" title="About Section">About</a></li>
-        <li><a href="#contact" title="Contact Section">Contact</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <div class="nav-top flex-row">
+            <img src="assets/shapes/image_geometry_menu_1.png" alt="geometry-shape">
+            <i class="fa-sharp fa-solid fa-xmark xmark"></i>
+        </div>
+        <ul class="nav-links flex-column">
+          <li><a class="nav-link" href="#headline" title="Headline Section">Hello</a></li>
+          <li><a class="nav-link" href="#projects" title="Projects Section">projects</a></li>
+          <li><a class="nav-link" href="#about" title="About Section">About</a></li>
+          <li><a class="nav-link" href="#contact" title="Contact Section">Contact</a></li>
+        </ul>
+        <div class="nav-bottom flex-row">
+          <img src="assets/shapes/image_geometry_menu_2.png" alt="geometry-shape">
+      </div>
+      </nav>
+    </div>
   </header>
 
   <main class="flex-column">
@@ -175,7 +185,7 @@
     </ul>
 
 
-    <section  id="about" class="max-width flex-column">
+    <section id="about" class="max-width flex-column">
       <div id="about-info">
         <h2 id="about-header" class="primary-text">About</h2>
         <p id="about-text" class="secondary-text">I can help you build a product , feature or website Look through some
@@ -228,7 +238,8 @@
           chat please get in touch.</p>
       </div>
 
-      <form id="contact" class="contact-form max-width flex-column" action="https://formspree.io/f/mzbqjqzq" method="POST">
+      <form id="contact" class="contact-form max-width flex-column" action="https://formspree.io/f/mzbqjqzq"
+        method="POST">
         <ul class="flex-column">
           <li>
             <label for="name">Your name</label><br>
@@ -240,8 +251,8 @@
           </li>
           <li>
             <label for="message">Your message</label><br>
-            <textarea name="message" id="message" placeholder="Enter your message here..."
-              maxlength="500" required></textarea>
+            <textarea name="message" id="message" placeholder="Enter your message here..." maxlength="500"
+              required></textarea>
           </li>
         </ul>
         <button type="submit" class="primary-button">Start Collaboration</button>
@@ -249,12 +260,14 @@
     </section>
   </main>
   <footer class="flex-column">
-    <a href="#" class="resume-link flex-row" title="Get my CV">Get my Resume <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <a href="#" class="resume-link flex-row" title="Get my CV">Get my Resume <i
+        class="fa-solid fa-arrow-up-right-from-square"></i></a>
     <div class="social-links flex-row">
       <a href="#" title="Visit Stack Overflow"><i class="fa-brands fa-stack-overflow"></i></a>
       <a href="https://github.com/chawkimbarki" title="Visit GitHub"><i class="fa-brands fa-github"></i></a>
       <a href="https://twitter.com/Chawki__Mbarki" title="Visit Twitter"><i class="fa-brands fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/chawki-mbarki-a77546202/" title="Visit linkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/chawki-mbarki-a77546202/" title="Visit linkedIn"><i
+          class="fa-brands fa-linkedin"></i></a>
       <a href="#" title="Visit M"><i class="fa-sharp fa-solid fa-m"></i></a>
       <a href="#" title="Visit idk"><i class="fa-regular fa-hand-peace"></i></a>
     </div>
