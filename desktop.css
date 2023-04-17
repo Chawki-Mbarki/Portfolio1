@@ -1,6 +1,8 @@
 /* ==================== Removed elements ================= */
 
 .menu,
+.nav-top,
+.nav-bottom,
 .geometry-shape1,
 .headline-image {
   display: none !important;
@@ -65,8 +67,14 @@ header {
   box-shadow: 0 0.5px 0 #dddfe6;
 }
 
+nav {
+  position: static;
+  grid-template-rows: 100%;
+  transform: translateY(0%);
+}
+
 .nav-links {
-  display: flex;
+  flex-direction: row;
   list-style: none;
   gap: 50px;
 }
