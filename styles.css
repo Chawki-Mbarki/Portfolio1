@@ -300,30 +300,6 @@ nav img {
   height: 186px;
 }
 
-.project-image1 {
-  background-image: url(assets/projects/1/main.svg);
-}
-
-.project-image2 {
-  background-image: url(assets/projects/2/main.jpeg);
-}
-
-.project-image3 {
-  background-image: url(assets/projects/3/main.jpg);
-}
-
-.project-image4 {
-  background-image: url(assets/projects/4/main.svg);
-}
-
-.project-image5 {
-  background-image: url(assets/projects/5/main.svg);
-}
-
-.project-image6 {
-  background-image: url(assets/projects/6/main.svg);
-}
-
 .project-info {
   height: 156px;
   padding: 20px;
