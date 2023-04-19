@@ -9,10 +9,11 @@ function displayNavigation() {
 // Dynamically generates the projects in works section.
 function generateProjects(projects) {
   const works = document.querySelector('.works');
+  const projectElements = [];
 
   projects.forEach((projectInfo) => {
     let tags = '';
-    for (let i = 0; i < (projectInfo.technologies).length; i += 1) {
+    for (let i = 0; i < projectInfo.technologies.length; i += 1) {
       const tag = projectInfo.technologies[i];
       tags += `<li>${tag}</li>\n`;
     }
@@ -34,7 +35,11 @@ function generateProjects(projects) {
           </div>
         </div>
       </li>`;
-    works.innerHTML += projectElement;
+    projectElements.push(projectElement);
+  });
+
+  works.innerHTML += projectElements.join('');
+  projects.forEach((projectInfo) => {
     document.querySelector(`.project-image${projectInfo.number}`).style.backgroundImage = `url(assets/projects/${projectInfo.number}/main.svg)`;
   });
 }
