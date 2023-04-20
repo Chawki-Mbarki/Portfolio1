@@ -141,6 +141,11 @@ const projects = [
   },
 ];
 
+const popupXmark = document.querySelector('.popup-project-container .fa-xmark');
+
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+
 // ================================= Functions =================================
 
 // Toggle the display status of navigation.
@@ -321,7 +326,14 @@ for (let i = 0; i < navLinks.length; i += 1) {
   navLinks[i].addEventListener('click', displayNavigation);
 }
 
-// =========================== Fixing stupid meanless linter errors =======================
+popupXmark.addEventListener('click', () => {
+  displayPopup(-1);
+});
 
-const fix = displaySelectedImage(1) + displayPopup('test');
-console.log(fix);
+leftArrow.addEventListener('click', () => {
+  displaySelectedImage('left');
+});
+
+rightArrow.addEventListener('click', () => {
+  displaySelectedImage('right');
+});
