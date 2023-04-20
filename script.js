@@ -229,11 +229,11 @@ function generatePopup(projectIndex) {
     nextProject.style.color = '#1a2236';
     nextProject.disabled = false;
     nextProject.style.cursor = 'pointer';
-  } else if (projectIndex === 1) {
+  } else if (projectIndex <= 1) {
     previousProject.style.color = 'red';
     previousProject.disabled = 'disabled';
     previousProject.style.cursor = 'not-allowed';
-  } else if (projectIndex === 6) {
+  } else if (projectIndex >= 6) {
     nextProject.style.color = 'red';
     nextProject.disabled = 'disabled';
     nextProject.style.cursor = 'not-allowed';
