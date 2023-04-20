@@ -141,7 +141,14 @@ const projects = [
   },
 ];
 
-// ================================= Adding Event Listeners =================================
+// ================================= Functions =================================
+
+// Toggle the display status of navigation.
+function displayNavigation() {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('display-nav');
+}
+
 // Generate the projects in the works section;
 function generateProjects(projects) {
   const works = document.querySelector('.works');
