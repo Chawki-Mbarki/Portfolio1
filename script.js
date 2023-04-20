@@ -266,6 +266,43 @@ function displayPopup(projectIndex) {
   return null;
 }
 
+/* allows you to switch between project images by clicking on your preffered image
+ or the arrow on each side */
+function displaySelectedImage(direction) {
+  let selectedImagePosition = 0;
+
+  for (let i = 1; i <= 4; i += 1) {
+    const selectedImage = document.querySelector(`.popup-window .secondary-image${i}`);
+    if (selectedImage.classList.contains('selected-image')) {
+      selectedImagePosition = i;
+      selectedImage.classList.remove('selected-image');
+      break;
+    }
+  }
+  if (typeof direction !== 'number') {
+    if (direction === 'right') {
+      if (selectedImagePosition >= 4) {
+        selectedImagePosition = 1;
+      } else {
+        selectedImagePosition += 1;
+      }
+    } else if (selectedImagePosition <= 1) {
+      selectedImagePosition = 4;
+    } else {
+      selectedImagePosition -= 1;
+    }
+  } else {
+    selectedImagePosition = direction;
+  }
+
+  const newSelectedImage = document.querySelector(`.popup-window .secondary-image${selectedImagePosition}`);
+  newSelectedImage.classList.add('selected-image');
+  const mainImage = document.querySelector('.popup-window .main-image');
+  mainImage.style.backgroundImage = newSelectedImage.style.backgroundImage;
+
+  return null;
+}
+
 // ================================= Event Listeners =================================
 
 menu.addEventListener('click', displayNavigation);
