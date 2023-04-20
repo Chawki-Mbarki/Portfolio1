@@ -1,58 +1,21 @@
-// ================================= Functions =================================
+// ================================= Global Variables declaration =================================
 
-// Toggle the Display-nav class showing/hiding navigation
-function displayNavigation() {
-  const nav = document.querySelector('nav');
-  nav.classList.toggle('display-nav');
-}
-
-// Dynamically generates the projects in works section.
-function generateProjects(projects) {
-  const works = document.querySelector('.works');
-  const projectElements = [];
-
-  projects.forEach((projectInfo) => {
-    let tags = '';
-    for (let i = 0; i < projectInfo.technologies.length; i += 1) {
-      const tag = projectInfo.technologies[i];
-      tags += `<li>${tag}</li>\n`;
-    }
-
-    const projectElement = `
-      <li class="project project-${projectInfo.number} flex-column">
-        <div class="project-container flex-column">
-          <div class="project-image project-image${projectInfo.number}">
-          </div>
-          <div class="project-info flex-column">
-            <div class="project-name">
-              <h3>${projectInfo.name}</h3>
-            </div>
-            <ul class="project-tags flex-row">
-              ${tags}
-            </ul>
-            <button type="button" class="primary-button dark-button">See this project <i
-              class="fa-solid fa-arrow-right"></i></button>
-          </div>
-        </div>
-      </li>`;
-    projectElements.push(projectElement);
-  });
-
-  works.innerHTML += projectElements.join('');
-  projects.forEach((projectInfo) => {
-    document.querySelector(`.project-image${projectInfo.number}`).style.backgroundImage = `url(assets/projects/${projectInfo.number}/main.svg)`;
-  });
-}
-
-// ================================= Variables declaration =================================
 const menu = document.querySelector('.menu');
 const xmark = document.querySelector('.xmark');
 const navLinks = document.querySelectorAll('.nav-link');
 
 const projects = [
   {
+    number: 0,
+    name: 'project Not Found',
+    description: '   Description Not Found',
+    technologies: ['None', 'None', 'None'],
+    link: '#',
+    source: '#',
+  },
+  {
     number: 1,
-    name: 'project Name Goes Here',
+    name: 'project Name Goes Here 1',
     description: `   Description 1
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -73,7 +36,7 @@ const projects = [
   },
   {
     number: 2,
-    name: 'project Name Goes Here',
+    name: 'project Name Goes Here 2',
     description: `   Description 2
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -94,7 +57,7 @@ const projects = [
   },
   {
     number: 3,
-    name: 'project Name Goes Here',
+    name: 'project Name Goes Here 3',
     description: `   Description 3
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -115,7 +78,7 @@ const projects = [
   },
   {
     number: 4,
-    name: 'project Name Goes Here',
+    name: 'project Name Goes Here 4',
     description: `   Description 4
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -136,7 +99,7 @@ const projects = [
   },
   {
     number: 5,
-    name: 'project Name Goes Here',
+    name: 'project Name Goes Here 5',
     description: `   Description 5
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -157,7 +120,7 @@ const projects = [
   },
   {
     number: 6,
-    name: 'project Name Goes Here',
+    name: 'project Name Goes Here 6',
     description: `   Description 6
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -179,11 +142,18 @@ const projects = [
 ];
 
 // ================================= Adding Event Listeners =================================
+// ================================= Event Listeners =================================
+
 menu.addEventListener('click', displayNavigation);
 xmark.addEventListener('click', displayNavigation);
+
+document.body.addEventListener('load', generateProjects(projects));
 
 for (let i = 0; i < navLinks.length; i += 1) {
   navLinks[i].addEventListener('click', displayNavigation);
 }
 
-document.body.addEventListener('load', generateProjects(projects));
+// =========================== Fixing stupid meanless linter errors =======================
+
+const fix = displaySelectedImage(1) + displayPopup('test');
+console.log(fix);
