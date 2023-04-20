@@ -142,6 +142,47 @@ const projects = [
 ];
 
 // ================================= Adding Event Listeners =================================
+// Generate the projects in the works section;
+function generateProjects(projects) {
+  const works = document.querySelector('.works');
+  const projectElements = [];
+  for (let i = 1; i < projects.length; i += 1) {
+    let tags = '';
+    const projectInfo = projects[i];
+    for (let j = 0; j < projectInfo.technologies.length; j += 1) {
+      const tag = projectInfo.technologies[j];
+      tags += `<li>${tag}</li>\n`;
+    }
+
+    const projectIndex = projectInfo.number;
+    const projectElement = `
+      <li class="project project-${projectInfo.number} flex-column">
+        <div class="project-container flex-column">
+          <div class="project-image project-image${projectInfo.number}">
+          </div>
+          <div class="project-info flex-column">
+            <div class="project-name">
+              <h3>${projectInfo.name}</h3>
+            </div>
+            <ul class="project-tags flex-row">
+              ${tags}
+            </ul>
+            <button type="button" onclick="displayPopup(${projectIndex})" class="primary-button dark-button">See this project <i
+              class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </li>`;
+
+    projectElements.push(projectElement);
+  }
+
+  works.innerHTML += projectElements.join('');
+
+  for (let i = 1; i < projects.length; i += 1) {
+    const projectInfo = projects[i];
+    document.querySelector(`.project-image${projectInfo.number}`).style.backgroundImage = `url(assets/projects/${projectInfo.number}/main.svg)`;
+  }
+}
 // ================================= Event Listeners =================================
 
 menu.addEventListener('click', displayNavigation);
