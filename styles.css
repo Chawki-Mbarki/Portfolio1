@@ -3,6 +3,7 @@
 /* ==================== Removed elements ================= */
 
 @media screen and (max-width: 767px) {
+  .popup-links,
   .headline-image2,
   .shapes {
     display: none !important;
@@ -107,9 +108,22 @@ main {
   font-size: 30px;
 }
 
+.popup-project-container > i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 19px;
+  font-size: calc(20px + 2vw);
+  cursor: pointer;
+}
+
 .dark-button i {
   color: white;
   margin-left: 20px;
+}
+
+.popup-button i {
+  margin-left: 36px;
 }
 
 .primary-button i {
@@ -196,6 +210,14 @@ nav {
   display: grid;
   grid-template-rows: 19.723% 54.325% 25.952%;
   transform: translateY(-100%);
+  opacity: 0;
+  transition: 1s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.display-nav {
+  transform: translateY(0%);
+  opacity: 100;
 }
 
 nav img {
@@ -242,10 +264,6 @@ nav img {
   justify-content: center;
   max-width: 100vw;
   max-height: 100%;
-}
-
-.display-nav {
-  transform: translateY(0%);
 }
 
 /* ==================== headline styles ==================== */
@@ -320,6 +338,10 @@ nav img {
   gap: 10px;
 }
 
+.ability li {
+  color: #fff;
+}
+
 .project-tags li {
   font-weight: 300;
   font-size: 10.3334px;
@@ -327,6 +349,148 @@ nav img {
   color: #1a2236;
   background-color: #98dede;
   padding: 6px 10px;
+}
+
+.popup-window {
+  position: fixed;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  top: 0;
+  z-index: 1;
+  background: rgba(26, 34, 54, 0.95);
+  backdrop-filter: blur(12px);
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.display-popup {
+  transform: scale(1);
+  opacity: 100%;
+}
+
+.popup-project-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  padding: 57px 0 20px 0;
+  overflow-y: scroll;
+  overflow-x: clip;
+  gap: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.popup-header,
+.popup-images {
+  padding: 0 20px 0 20px;
+}
+
+.popup-header .project-name {
+  font-size: 6.25vw;
+  color: #1a2236;
+  margin-bottom: 23px;
+}
+
+.popup-header .project-tags {
+  margin: 0;
+}
+
+.popup-header .project-tags li {
+  border: 0.516669px solid #1a2236;
+  background-color: white;
+}
+
+.popup-images {
+  min-height: calc(350px + 10vh + 10vw);
+  max-height: 857px !important;
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+
+.main-image {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+}
+
+.arrow {
+  width: calc(3.2vh + 4.8vw);
+  height: calc(3.2vh + 4.8vw);
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #1a22365a;
+  box-shadow: #1a2236 1px 1px 1px;
+}
+
+.left-arrow {
+  transform: rotate(180deg);
+}
+
+.secondary-images {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.secondary-image:hover {
+  cursor: pointer;
+}
+
+.main-image,
+.secondary-image1,
+.secondary-image2,
+.secondary-image3,
+.secondary-image4 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(assets/projects/0/main.svg.svg);
+  transition: 0.2s;
+}
+
+.popup-description {
+  padding: 0 18px 0 11px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.popup-buttons {
+  width: 100%;
+  gap: 29px;
+  align-items: center;
+}
+
+.popup-button {
+  width: 76.875vw;
+  height: 51px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  background-color: white;
+  border: 1px solid #1a2236;
+  margin-left: 11px;
+}
+
+.popup-button:hover,
+.popup-button:hover i {
+  background-color: #1a2236;
+  color: white;
+  cursor: pointer;
+}
+
+.selected-image {
+  border: 1px solid #1a2236;
+}
+
+.popup-links {
+  padding: 0 11px;
 }
 
 /* ============================== about-myself styles ==================================== */
@@ -368,10 +532,6 @@ nav img {
 
 .ability h3 {
   margin: 0;
-}
-
-.ability li {
-  color: #fff;
 }
 
 .ability-title {
