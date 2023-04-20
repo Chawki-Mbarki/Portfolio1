@@ -49,6 +49,14 @@ body {
   border: 1px solid white;
 }
 
+.previous-project i {
+  margin-right: 18px;
+}
+
+.next-project i {
+  margin-left: 18px;
+}
+
 .dark-button:hover i {
   background: #1a2236;
   color: white;
@@ -71,6 +79,7 @@ nav {
   position: static;
   grid-template-rows: 100%;
   transform: translateY(0%);
+  opacity: 100;
 }
 
 .nav-links {
@@ -137,8 +146,8 @@ nav {
 .works {
   width: 100%;
   display: grid;
-  grid-template-columns: 32.291% 1.041% 22.222% 12.152% 7.8902% 12.1788% 1fr;
-  grid-template-rows: 33.941% 4.866% 11.557% 4.866% 11.557% 6.082% 4.587% 6.057% 7.542% 1fr;
+  grid-template-columns: 32.3% 1% 22.2% 12.2% 7.9% 12.2% 1fr;
+  grid-template-rows: 33.9% 4.9% 11.6% 4.9% 11.6% 6.1% 4.6% 6.1% 7.5% 1fr;
   height: calc(50vw + 120vh);
   max-height: 1644px;
   gap: 0;
@@ -244,6 +253,10 @@ nav {
   transition: 0.5s;
 }
 
+.project-container:hover .project-image {
+  transform: scale(1.1);
+}
+
 .project-info {
   position: absolute;
   flex-direction: column;
@@ -270,7 +283,7 @@ nav {
   font-size: 2.777vw;
   font-weight: 700;
   line-height: 80%;
-  overflow: hidden;
+  overflow-x: clip;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -299,8 +312,55 @@ nav {
   max-width: 212px;
 }
 
-.project-container:hover .project-image {
-  transform: scale(1.5);
+.popup-window {
+  padding: 70px;
+}
+
+.popup-project-container {
+  align-items: center;
+}
+
+.arrow {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.popup-header .project-name {
+  font-size: 5vw;
+}
+
+.popup-header,
+.popup-images {
+  max-width: 1180px;
+  width: 100%;
+}
+
+.popup-description,
+.popup-buttons,
+.popup-links {
+  width: 100%;
+  max-width: 700px;
+}
+
+.popup-buttons {
+  flex-direction: row;
+}
+
+.popup-buttons button {
+  max-width: 246px;
+}
+
+.popup-links {
+  justify-content: space-between;
+}
+
+.popup-links button {
+  border: none;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  background-color: white;
+  gap: 18px;
 }
 
 /* ======================About myself=================================== */
@@ -436,7 +496,8 @@ footer {
     font-size: 40px;
   }
 
-  .project-1 .project-name h3 {
+  .project-1 .project-name h3,
+  .popup-header .project-name {
     font-size: 60px;
   }
 
