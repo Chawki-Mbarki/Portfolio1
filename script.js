@@ -254,6 +254,18 @@ function generatePopup(projectIndex) {
   projectNumber.innerHTML = `${projectIndex} / 6`;
 }
 
+// Toggle the display status of the popup window.
+function displayPopup(projectIndex) {
+  if (projectIndex >= projects.length || projectIndex < -1) {
+    generatePopup(0);
+  } else if (projectIndex !== -1) {
+    generatePopup(projectIndex);
+  } if (typeof (projectIndex) === 'number') {
+    document.querySelector('.popup-window').classList.toggle('display-popup');
+  }
+  return null;
+}
+
 // ================================= Event Listeners =================================
 
 menu.addEventListener('click', displayNavigation);
