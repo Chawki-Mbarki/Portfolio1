@@ -183,6 +183,77 @@ function generateProjects(projects) {
     document.querySelector(`.project-image${projectInfo.number}`).style.backgroundImage = `url(assets/projects/${projectInfo.number}/main.svg)`;
   }
 }
+
+/* add all the project details to the popup window based on the
+'projectIndex' Also this function will swap between projects
+if it is provided by a direction instead of projectIndex. */
+function generatePopup(projectIndex) {
+  const projectName = document.querySelector('.popup-window .project-name');
+  const projectTags = document.querySelector('.popup-window .project-tags');
+  const mainImage = document.querySelector('.popup-window .main-image');
+  const secondaryImage1 = document.querySelector('.popup-window .secondary-image1');
+  const secondaryImage2 = document.querySelector('.popup-window .secondary-image2');
+  const secondaryImage3 = document.querySelector('.popup-window .secondary-image3');
+  const secondaryImage4 = document.querySelector('.popup-window .secondary-image4');
+  const popupDescription = document.querySelector('.popup-description');
+  const previousProject = document.querySelector('.previous-project');
+  const nextProject = document.querySelector('.next-project');
+  const projectNumber = document.querySelector('.popup-project-number');
+
+  if (typeof (projectIndex) === 'string') {
+    if (projectIndex === 'left') {
+      projectIndex = Number(projectNumber.innerHTML.charAt(0));
+      projectIndex -= 1;
+    } else if (projectIndex === 'right') {
+      projectIndex = Number(projectNumber.innerHTML.charAt(0));
+      projectIndex += 1;
+    }
+  }
+
+  if (projectIndex > 1 && projectIndex < 6) {
+    previousProject.style.color = '#1a2236';
+    previousProject.disabled = false;
+    previousProject.style.cursor = 'pointer';
+    nextProject.style.color = '#1a2236';
+    nextProject.disabled = false;
+    nextProject.style.cursor = 'pointer';
+  } else if (projectIndex === 1) {
+    previousProject.style.color = 'red';
+    previousProject.disabled = 'disabled';
+    previousProject.style.cursor = 'not-allowed';
+  } else if (projectIndex === 6) {
+    nextProject.style.color = 'red';
+    nextProject.disabled = 'disabled';
+    nextProject.style.cursor = 'not-allowed';
+  }
+  const project = projects[projectIndex];
+
+  projectName.innerHTML = project.name;
+
+  let tags = '';
+  for (let i = 0; i < project.technologies.length; i += 1) {
+    const tag = project.technologies[i];
+    tags += `<li>${tag}</li>\n`;
+  }
+  projectTags.innerHTML = tags;
+
+  secondaryImage1.style.backgroundImage = `url('assets/projects/${projectIndex}/Project-secondary-picture1.svg')`;
+  secondaryImage2.style.backgroundImage = `url('assets/projects/${projectIndex}/Project-secondary-picture2.svg')`;
+  secondaryImage3.style.backgroundImage = `url('assets/projects/${projectIndex}/Project-secondary-picture3.svg')`;
+  secondaryImage4.style.backgroundImage = `url('assets/projects/${projectIndex}/Project-secondary-picture4.svg')`;
+
+  const selectedImage = document.querySelector('.selected-image');
+  if (selectedImage != null) {
+    selectedImage.classList.remove('selected-image');
+  }
+  secondaryImage1.classList.add('selected-image');
+  mainImage.style.backgroundImage = secondaryImage1.style.backgroundImage;
+
+  popupDescription.innerHTML = project.description;
+
+  projectNumber.innerHTML = `${projectIndex} / 6`;
+}
+
 // ================================= Event Listeners =================================
 
 menu.addEventListener('click', displayNavigation);
