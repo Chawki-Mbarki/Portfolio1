@@ -225,20 +225,26 @@ function generatePopup(projectIndex) {
   }
 
   if (projectIndex > 1 && projectIndex < 6) {
-    previousProject.style.color = '#1a2236';
-    previousProject.disabled = false;
-    previousProject.style.cursor = 'pointer';
     nextProject.style.color = '#1a2236';
     nextProject.disabled = false;
     nextProject.style.cursor = 'pointer';
+    previousProject.style.color = '#1a2236';
+    previousProject.disabled = false;
+    previousProject.style.cursor = 'pointer';
   } else if (projectIndex <= 1) {
     previousProject.style.color = 'red';
     previousProject.disabled = 'disabled';
     previousProject.style.cursor = 'not-allowed';
+    nextProject.style.color = '#1a2236';
+    nextProject.disabled = false;
+    nextProject.style.cursor = 'pointer';
   } else if (projectIndex >= 6) {
     nextProject.style.color = 'red';
     nextProject.disabled = 'disabled';
     nextProject.style.cursor = 'not-allowed';
+    previousProject.style.color = '#1a2236';
+    previousProject.disabled = false;
+    previousProject.style.cursor = 'pointer';
   }
   const project = projects[projectIndex];
 
@@ -337,7 +343,7 @@ function formValidation() {
     return true;
   }
   const warning = document.querySelector('#warning');
-  warning.innerHTML = `Errors : <br>${errors.join('<br>')}`;
+  warning.innerHTML = `Errors<br>${errors.join('<br>')}`;
   return false;
 }
 
