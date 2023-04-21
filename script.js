@@ -401,3 +401,4 @@ rightArrow.addEventListener('click', () => {
 });
 
 contactForm.onsubmit = function test() { return formValidation(); };
+formReset.addEventListener('click', deleteFormData);
