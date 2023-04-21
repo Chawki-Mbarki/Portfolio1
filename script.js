@@ -146,6 +146,8 @@ const popupXmark = document.querySelector('.popup-project-container .fa-xmark');
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 
+const contactForm = document.querySelector('.contact-form');
+
 // ================================= Functions =================================
 
 // Toggle the display status of navigation.
@@ -223,20 +225,26 @@ function generatePopup(projectIndex) {
   }
 
   if (projectIndex > 1 && projectIndex < 6) {
-    previousProject.style.color = '#1a2236';
-    previousProject.disabled = false;
-    previousProject.style.cursor = 'pointer';
     nextProject.style.color = '#1a2236';
     nextProject.disabled = false;
     nextProject.style.cursor = 'pointer';
+    previousProject.style.color = '#1a2236';
+    previousProject.disabled = false;
+    previousProject.style.cursor = 'pointer';
   } else if (projectIndex <= 1) {
     previousProject.style.color = 'red';
     previousProject.disabled = 'disabled';
     previousProject.style.cursor = 'not-allowed';
+    nextProject.style.color = '#1a2236';
+    nextProject.disabled = false;
+    nextProject.style.cursor = 'pointer';
   } else if (projectIndex >= 6) {
     nextProject.style.color = 'red';
     nextProject.disabled = 'disabled';
     nextProject.style.cursor = 'not-allowed';
+    previousProject.style.color = '#1a2236';
+    previousProject.disabled = false;
+    previousProject.style.cursor = 'pointer';
   }
   const project = projects[projectIndex];
 
@@ -315,6 +323,28 @@ function displaySelectedImage(direction) {
   return null;
 }
 
+// return form errors
+function formErrors() {
+  const email = document.querySelector('#email').value;
+  const errors = [];
+
+  if (email !== email.toLowerCase()) {
+    errors.push(`Email must be in lowercase : <b>${email.toLowerCase()}</b>`);
+  }
+  return errors;
+}
+
+// validates user input
+function formValidation() {
+  const errors = formErrors();
+  if (errors.length === 0) {
+    return true;
+  }
+  const warning = document.querySelector('#warning');
+  warning.innerHTML = `Errors<br>${errors.join('<br>')}`;
+  return false;
+}
+
 // ================================= Event Listeners =================================
 
 menu.addEventListener('click', displayNavigation);
@@ -337,3 +367,5 @@ leftArrow.addEventListener('click', () => {
 rightArrow.addEventListener('click', () => {
   displaySelectedImage('right');
 });
+
+contactForm.onsubmit = function test() { return formValidation(); };
