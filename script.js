@@ -325,8 +325,6 @@ function displaySelectedImage(direction) {
 
 // return form errors
 function formErrors() {
-  /*  const name = document.querySelector("#name").value;
-      const message = document.querySelector("#message").value; dont need this for now */
   const email = document.querySelector('#email').value;
   const errors = [];
 
