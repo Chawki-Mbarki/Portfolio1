@@ -381,7 +381,8 @@ function grabFormData() {
 menu.addEventListener('click', displayNavigation);
 xmark.addEventListener('click', displayNavigation);
 
-document.body.addEventListener('load', generateProjects(projects));
+body.addEventListener('load', generateProjects(projects));
+body.addEventListener('load', grabFormData());
 
 for (let i = 0; i < navLinks.length; i += 1) {
   navLinks[i].addEventListener('click', displayNavigation);
