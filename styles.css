@@ -619,6 +619,17 @@ nav img {
   color: #7d7c84;
 }
 
+#warning,
+#warning b {
+  color: rgb(255, 0, 25);
+  text-align: center;
+}
+
+#warning b {
+  font-weight: bolder;
+  color: rgb(255, 0, 85);
+}
+
 /* ==================== Footer styles ==================== */
 
 footer {
