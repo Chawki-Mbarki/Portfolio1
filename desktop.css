@@ -477,6 +477,12 @@ nav {
   font-weight: bolder;
 }
 
+.form-buttons {
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
 /* ==================== Footer styles ==================== */
 
 footer {
