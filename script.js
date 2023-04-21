@@ -1,5 +1,7 @@
 // ================================= Global Variables declaration =================================
 
+const body = document.querySelector('body');
+
 const menu = document.querySelector('.menu');
 const xmark = document.querySelector('.xmark');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -147,6 +149,7 @@ const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 
 const contactForm = document.querySelector('.contact-form');
+const formReset = document.querySelector('.form-reset');
 
 // ================================= Functions =================================
 
@@ -323,6 +326,23 @@ function displaySelectedImage(direction) {
   return null;
 }
 
+// delete all saved data from local storage
+function deleteFormData() {
+  localStorage.clear();
+}
+
+// saves user inputs in local storage
+function saveFormData() {
+  deleteFormData();
+  const formData = {};
+
+  formData.name = document.querySelector('#name').value;
+  formData.email = document.querySelector('#email').value;
+  formData.message = document.querySelector('#message').value;
+
+  localStorage.setItem('formData', JSON.stringify(formData));
+}
+
 // return form errors
 function formErrors() {
   const email = document.querySelector('#email').value;
@@ -338,6 +358,7 @@ function formErrors() {
 function formValidation() {
   const errors = formErrors();
   if (errors.length === 0) {
+    saveFormData();
     return true;
   }
   const warning = document.querySelector('#warning');
@@ -345,12 +366,23 @@ function formValidation() {
   return false;
 }
 
+// grabes saved users inputs(if it exists) from local storage and use it to fill form inputs
+function grabFormData() {
+  const formData = JSON.parse(localStorage.getItem('formData'));
+  if (formData) {
+    document.querySelector('#name').value = formData.name;
+    document.querySelector('#email').value = formData.email;
+    document.querySelector('#message').value = formData.message;
+  }
+}
+
 // ================================= Event Listeners =================================
 
 menu.addEventListener('click', displayNavigation);
 xmark.addEventListener('click', displayNavigation);
 
-document.body.addEventListener('load', generateProjects(projects));
+body.addEventListener('load', generateProjects(projects));
+body.addEventListener('load', grabFormData());
 
 for (let i = 0; i < navLinks.length; i += 1) {
   navLinks[i].addEventListener('click', displayNavigation);
@@ -369,3 +401,4 @@ rightArrow.addEventListener('click', () => {
 });
 
 contactForm.onsubmit = function test() { return formValidation(); };
+formReset.addEventListener('click', deleteFormData);
