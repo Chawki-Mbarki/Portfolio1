@@ -630,6 +630,12 @@ nav img {
   color: rgb(255, 0, 85);
 }
 
+.form-buttons {
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
 /* ==================== Footer styles ==================== */
 
 footer {
