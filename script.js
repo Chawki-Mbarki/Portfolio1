@@ -146,6 +146,8 @@ const popupXmark = document.querySelector('.popup-project-container .fa-xmark');
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 
+const contactForm = document.querySelector('.contact-form');
+
 // ================================= Functions =================================
 
 // Toggle the display status of navigation.
@@ -315,6 +317,30 @@ function displaySelectedImage(direction) {
   return null;
 }
 
+// return form errors
+function formErrors() {
+  /*  const name = document.querySelector("#name").value;
+      const message = document.querySelector("#message").value; dont need this for now */
+  const email = document.querySelector('#email').value;
+  const errors = [];
+
+  if (email !== email.toLowerCase()) {
+    errors.push(`Email must be in lowercase : <b>${email.toLowerCase()}</b>`);
+  }
+  return errors;
+}
+
+// validates user input
+function formValidation() {
+  const errors = formErrors();
+  if (errors.length === 0) {
+    return true;
+  }
+  const warning = document.querySelector('#warning');
+  warning.innerHTML = `Errors : <br>${errors.join('<br>')}`;
+  return false;
+}
+
 // ================================= Event Listeners =================================
 
 menu.addEventListener('click', displayNavigation);
@@ -337,3 +363,5 @@ leftArrow.addEventListener('click', () => {
 rightArrow.addEventListener('click', () => {
   displaySelectedImage('right');
 });
+
+contactForm.onsubmit = function test() { return formValidation(); };
