@@ -358,6 +358,7 @@ function formErrors() {
 function formValidation() {
   const errors = formErrors();
   if (errors.length === 0) {
+    saveFormData();
     return true;
   }
   const warning = document.querySelector('#warning');
