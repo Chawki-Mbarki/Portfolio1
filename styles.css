@@ -38,12 +38,12 @@ main {
   align-items: center;
 }
 
-.flex-row {
+.flex-row,
+.flex-column {
   display: flex;
 }
 
 .flex-column {
-  display: flex;
   flex-direction: column;
 }
 
@@ -104,6 +104,7 @@ main {
 .nav-top i {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 24px 20px 0 21px;
   font-size: 30px;
 }
@@ -227,10 +228,12 @@ nav img {
 
 .nav-top {
   justify-content: space-between;
+  display: grid;
+  grid-template-columns: 82.18% 1fr;
 }
 
 .nav-top img {
-  max-width: 75%;
+  width: 100%;
 }
 
 .nav-links {
