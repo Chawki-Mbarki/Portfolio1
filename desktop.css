@@ -10,6 +10,10 @@
 
 /* ==================== General styles ================= */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: none;
 }
@@ -35,6 +39,12 @@ body {
   color: #1a2236;
   border: 1px solid #1a2236;
   transition: all 0.3s;
+}
+
+.popup-project-container i {
+  margin: 0;
+  top: 5vw;
+  right: 4.17vw;
 }
 
 .dark-button i {
@@ -69,8 +79,11 @@ body {
 /* ==================== header styles ==================== */
 
 header {
-  height: 100px;
-  padding: 38px 0;
+  position: fixed;
+  z-index: 1;
+  height: 10.23vh;
+  max-height: 100px;
+  padding: 3.889vh 0;
   justify-content: center;
   box-shadow: 0 0.5px 0 #dddfe6;
 }
@@ -89,7 +102,7 @@ nav {
 }
 
 .nav-links a {
-  font-size: 16px;
+  font-size: calc(16px + 0.5vw);
   line-height: 24px;
   color: #1a2236;
   background:
@@ -114,7 +127,7 @@ nav {
   width: 100%;
   max-height: 877px;
   grid-template-columns: 1fr 48.75%;
-  margin-bottom: 5%;
+  margin: 10.23vh 0 5% 0;
 }
 
 .info {
@@ -313,11 +326,12 @@ nav {
 }
 
 .popup-window {
-  padding: 70px;
+  padding: 4.86vw;
 }
 
 .popup-project-container {
   align-items: center;
+  padding: 4.17vw 4.17vw 7.57vw 4.17vw;
 }
 
 .arrow {
@@ -331,8 +345,8 @@ nav {
 
 .popup-header,
 .popup-images {
-  max-width: 1180px;
   width: 100%;
+  padding: 0;
 }
 
 .popup-description,
@@ -514,5 +528,28 @@ footer {
 
   .project-container button {
     font-size: 18px;
+  }
+
+  .popup-window {
+    padding: 70px;
+  }
+
+  .popup-project-container {
+    padding: 60px 60px 109px 60px;
+    max-width: 1300px;
+  }
+
+  .popup-project-container > i {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    margin: 0;
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-height: 1023px) {
+  .headline {
+    margin-top: 100px;
   }
 }
