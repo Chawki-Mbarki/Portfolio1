@@ -14,23 +14,23 @@
 </head>
 
 <body class="flex-column">
-  <a href="#" id="headlinelink"></a>
+  <a href="#" id="headlinelink" aria-label="headline-section"></a>
   <header class="toolbar flex-row">
     <div class="navigation">
       <i class="fa-sharp fa-solid fa-bars menu"></i>
       <nav>
         <div class="nav-top flex-row">
-          <img src="assets/shapes/image_geometry_menu_1.png" alt="geometry-shape">
+          <img src="assets/shapes/image_geometry_menu_1.svg" alt="geometry-shape">
           <i class="fa-sharp fa-solid fa-xmark xmark"></i>
         </div>
         <ul class="nav-links flex-column">
-          <li><a class="nav-link active" href="#headlinelink" title="Headline Section">Hello</a></li>
-          <li><a class="nav-link" href="#workslink" title="Projects Section">projects</a></li>
-          <li><a class="nav-link" href="#aboutlink" title="About Section">About</a></li>
-          <li><a class="nav-link" href="#contactlink" title="Contact Section">Contact</a></li>
+          <li><a class="nav-link active" href="#headlinelink" title="Headline-link Section">Hello</a></li>
+          <li><a class="nav-link" href="#workslink" title="Projects-link Section">projects</a></li>
+          <li><a class="nav-link" href="#aboutlink" title="About-link Section">About</a></li>
+          <li><a class="nav-link" href="#contactlink" title="Contact-link Section">Contact</a></li>
         </ul>
         <div class="nav-bottom flex-row">
-          <img src="assets/shapes/image_geometry_menu_2.png" alt="geometry-shape">
+          <img src="assets/shapes/image_geometry_menu_2.svg" alt="geometry-shape">
         </div>
       </nav>
     </div>
@@ -49,11 +49,34 @@
         <button type="button" class="primary-button">Start Collaboration</button>
       </div>
       <div class="shape flex-row">
-        <img src="assets/images/Headline-image.svg" class="headline-image" alt="geometry-shapes">
-        <img src="assets/images/Headline-image2.svg" class="headline-image2" alt="geometry-shapes">
+        <img src="assets/shapes/Headline-image.svg" class="headline-image" alt="geometry-shapes">
+        <img src="assets/shapes/Headline-image2.svg" class="headline-image2" alt="geometry-shapes">
       </div>
-      <a href="#" id="workslink"></a>
+      <a href="#" id="workslink" aria-label="works-section"></a>
     </section>
+
+    <ul id="projects" class="works section max-width">
+      <li class="works-title flex-row">
+        <h2 class="primary-text works-header">Projects</h2>
+      </li>
+
+      <li class="shapes shape-2 flex-row">
+        <img src="assets/shapes/6.svg" alt="geometry-shape">
+      </li>
+
+      <li class="shapes shape-3 flex-row">
+        <img src="assets/shapes/11.svg" alt="geometry-shape">
+      </li>
+
+      <li class="shapes shape-4 flex-row">
+        <img src="assets/shapes/8.svg" alt="geometry-shape">
+        <img src="assets/shapes/7.svg" alt="geometry-shape">
+      </li>
+
+      <li class="shapes shape-5 flex-row">
+        <img src="assets/shapes/12.svg" alt="geometry-shape">
+      </li>
+    </ul>
 
     <div class="popup-window flex-row">
       <div class="popup-project-container flex-column">
@@ -86,37 +109,15 @@
           <button class="popup-button see-source">See Source <i class="fa-brands fa-github"></i></button>
         </div>
         <div class="popup-links flex-row">
-          <button type="button" onclick="generatePopup('left')" class="previous-project"><i class="fa-sharp fa-solid fa-arrow-left"></i> Previous Project</button>
+          <button type="button" onclick="generatePopup('left')" class="previous-project"><i
+              class="fa-sharp fa-solid fa-arrow-left"></i> Previous Project</button>
           <p class="popup-project-number">0 / 6</p>
-          <button type="button" onclick="generatePopup('right')" class="next-project">Next Project <i class="fa-sharp fa-solid fa-arrow-right"></i></button>
+          <button type="button" onclick="generatePopup('right')" class="next-project">Next Project <i
+              class="fa-sharp fa-solid fa-arrow-right"></i></button>
         </div>
       </div>
     </div>
-
-    <ul id="projects" class="works section max-width">
-      <li class="works-title flex-row">
-        <h2 class="primary-text works-header">Projects</h2>
-      </li>
-
-      <li class="shapes shape-2 flex-row">
-        <img src="assets/shapes/6.svg" alt="geometry-shape">
-      </li>
-
-      <li class="shapes shape-3 flex-row">
-        <img src="assets/shapes/11.svg" alt="geometry-shape">
-      </li>
-
-      <li class="shapes shape-4 flex-row">
-        <img src="assets/shapes/8.svg" alt="geometry-shape">
-        <img src="assets/shapes/7.svg" alt="geometry-shape">
-      </li>
-
-      <li class="shapes shape-5 flex-row">
-        <img src="assets/shapes/12.svg" alt="geometry-shape">
-      </li>
-    </ul>
-    <a href="#" id="aboutlink"></a>
-
+    <a href="#" id="aboutlink" aria-label="about-section"></a>
 
     <section id="about" class="max-width section flex-column">
       <div id="about-info">
@@ -127,6 +128,7 @@
         <button id="about-button" class="primary-button">Get my CV<i
             class="fa-sharp fa-solid fa-circle-down"></i></button>
       </div>
+
       <div id="abilities">
         <div id="languages" class="ability">
           <h3 class="ability-title">Languages</h3>
@@ -166,14 +168,13 @@
 
     <section id="contact" class="contact section flex-column">
       <div class="contact-info max-width flex-column">
-        <a href="#" id="contactlink"></a>
+        <a href="#" id="contactlink" aria-label="contact-section"></a>
         <h2 class="primary-text">Get started</h2>
         <p class="secondary-text headline-text">I'm always interested in hearing about new projects, so if you'd like to
           chat please get in touch.</p>
       </div>
 
-      <form class="contact-form max-width flex-column" action="https://formspree.io/f/mzbqjqzq"
-        method="POST">
+      <form class="contact-form max-width flex-column" action="https://formspree.io/f/mzbqjqzq" method="POST">
         <ul class="flex-column">
           <li>
             <label for="name">Your name</label><br>
@@ -198,7 +199,7 @@
     </section>
   </main>
   <footer class="flex-column">
-    <a href="#" class="resume-link flex-row" title="Get my CV">Get my Resume <i
+    <a href="#" class="resume-link flex-row" title="Get my CV" aria-label="resume-link">Get my Resume <i
         class="fa-solid fa-arrow-up-right-from-square"></i></a>
     <div class="social-links flex-row">
       <a href="#" title="Visit Stack Overflow"><i class="fa-brands fa-stack-overflow"></i></a>
