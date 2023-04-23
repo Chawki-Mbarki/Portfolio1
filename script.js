@@ -5,6 +5,7 @@ const body = document.querySelector('body');
 const menu = document.querySelector('.menu');
 const xmark = document.querySelector('.xmark');
 const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('.section');
 
 const projects = [
   {
@@ -376,6 +377,24 @@ function grabFormData() {
   }
 }
 
+// change the 'active' class to the link of the current section that is visible on the screen.
+function checkActiveSection() {
+  sections.forEach((section, index) => {
+    const sectionTop = section.offsetTop;
+    const viewportHeight = document.documentElement.clientHeight;
+
+    // Checks if the user has scrolled to this section
+    if (window.scrollY >= sectionTop - viewportHeight * 0.5) {
+      // Removes the active class from all menu links
+      navLinks.forEach((link) => {
+        link.classList.remove('active');
+      });
+      // Add the active class to the current menu link
+      navLinks[index].classList.add('active');
+    }
+  });
+}
+
 // ================================= Event Listeners =================================
 
 menu.addEventListener('click', displayNavigation);
@@ -402,3 +421,8 @@ rightArrow.addEventListener('click', () => {
 
 contactForm.onsubmit = function test() { return formValidation(); };
 formReset.addEventListener('click', deleteFormData);
+
+// Add an event listener to listen for scroll events
+window.addEventListener('scroll', () => {
+  checkActiveSection();
+});
