@@ -188,6 +188,7 @@ main {
 
 header {
   width: 100%;
+  background-color: white;
 }
 
 .menu {
@@ -252,12 +253,14 @@ nav img {
   background-size: 100% 0.1em, 0 0.1em;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
-  transition: background-size 400ms;
+  transition: background-size 100ms;
+  padding-bottom: 5px;
 }
 
 .nav-links a:hover,
-.nav-links a:focus {
-  background-size: 0 0.1em, 100% 0.1em;
+.nav-links a:focus,
+.active {
+  background-size: 0 0.1em, 100% 0.1em !important;
 }
 
 .nav-bottom {
