@@ -38,7 +38,8 @@ main {
   align-items: center;
 }
 
-.flex-row, .flex-column {
+.flex-row,
+.flex-column {
   display: flex;
 }
 
@@ -103,6 +104,7 @@ main {
 .nav-top i {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 24px 20px 0 21px;
   font-size: 30px;
 }
@@ -228,11 +230,6 @@ nav img {
   justify-content: space-between;
   display: grid;
   grid-template-columns: 82.18% 1fr;
-}
-
-.nav-top i {
-  justify-content: center;
-  align-items: center;
 }
 
 .nav-top img {
