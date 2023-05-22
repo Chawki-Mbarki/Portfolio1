@@ -1,8 +1,27 @@
-<a id="readme-top"></a>
+<h1 align="center">🚀 My portfolio 🚀</h1>
 
+<p align="center">
+  <a href="https://github.com/chawkimbarki">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub badge" />
+  </a>
+  <a href="https://twitter.com/Chawki__Mbarki">
+    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter badge" />
+  </a>
+  <a href="https://www.linkedin.com/in/chawki-mbarki-a77546202/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn badge" />
+  </a>
+</p>
+
+<p align="center">
+  <strong>This portfolio project showcases my projects, contact info, and contact form in a simple and elegant way.</strong>
+  <br>
+   It demonstrates my coding skills through its organized, amazing UI and UX. You can browse through my projects and see the technologies I used, the challenges I faced, and the solutions I implemented.
+</p>
 <div align="center">
-  <h3><b>My Portfolio</b></h3>
+<img src="./app_screenshot.png">
 </div>
+
+<hr>
 
 # 📗 Table of Contents
 
